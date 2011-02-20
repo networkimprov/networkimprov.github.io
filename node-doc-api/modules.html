@@ -252,7 +252,7 @@ for anything.</p>
 is on the filesystem.  Instead, it literally adds <code>'./lib'</code>,
 meaning that if you do <code>require('y.js')</code> in <code>/a/b/x.js</code>, then it'll look
 in <code>/a/b/lib/y.js</code>.  If you then did <code>require('y.js')</code> in
-<code>/l/m/n/o/p.js</code>, then it'd look in <code>/l/m/n/o/p/lib/y.js</code>.</p>
+<code>/l/m/n/o/p.js</code>, then it'd look in <code>/l/m/n/o/lib/y.js</code>.</p>
 
 <p>In practice, people have used this as an ad hoc way to bundle
 dependencies, but this technique is brittle.</p>
