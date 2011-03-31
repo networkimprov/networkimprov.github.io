@@ -14,7 +14,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#path" title="Path">Path</a><ul><li><a href="#path.normalize" title="path.normalize(p)">path.normalize(p)</a></li><li><a href="#path.join" title="path.join([path1], [path2], [...])">path.join([path1], [path2], [...])</a></li><li><a href="#path.resolve" title="path.resolve([from ...], to)">path.resolve([from ...], to)</a></li><li><a href="#path.dirname" title="path.dirname(p)">path.dirname(p)</a></li><li><a href="#path.basename" title="path.basename(p, [ext])">path.basename(p, [ext])</a></li><li><a href="#path.extname" title="path.extname(p)">path.extname(p)</a></li><li><a href="#path.exists" title="path.exists(p, [callback])">path.exists(p, [callback])</a></li></ul></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#path" title="Path">Path</a><ul><li><a href="#path.normalize" title="path.normalize(p)">path.normalize(p)</a></li><li><a href="#path.join" title="path.join([path1], [path2], [...])">path.join([path1], [path2], [...])</a></li><li><a href="#path.resolve" title="path.resolve([from ...], to)">path.resolve([from ...], to)</a></li><li><a href="#path.dirname" title="path.dirname(p)">path.dirname(p)</a></li><li><a href="#path.basename" title="path.basename(p, [ext])">path.basename(p, [ext])</a></li><li><a href="#path.extname" title="path.extname(p)">path.extname(p)</a></li><li><a href="#path.exists" title="path.exists(p, [callback])">path.exists(p, [callback])</a></li><li><a href="#path.existsSync" title="path.existsSync(p)">path.existsSync(p)</a></li></ul></li></ul></div>
 <h2 id="path">Path</h2>
 
 <p>This module contains utilities for dealing with file paths.  Use
@@ -129,6 +129,10 @@ with either true or false. Example:</p>
 <pre><code>path.exists('/etc/passwd', function (exists) {
   util.debug(exists ? "it's there" : "no passwd!");
 });</code></pre>
+
+<h3 id="path.existsSync">path.existsSync(p)</h3>
+
+<p>Synchronous version of <code>path.exists</code>.</p>
   </div>
   <script type="text/javascript" src="assets/sh_main.js"></script>
   <script type="text/javascript" src="assets/sh_javascript.min.js"></script>

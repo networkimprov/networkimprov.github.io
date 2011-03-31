@@ -14,17 +14,27 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#net" title="net">net</a><ul><li><a href="#net.createServer" title="net.createServer(connectionListener)">net.createServer(connectionListener)</a></li><li><a href="#net.createConnection" title="net.createConnection(arguments...)">net.createConnection(arguments...)</a></li><li><a href="#net.Server" title="net.Server">net.Server</a><ul><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.listenFD" title="server.listenFD(fd)">server.listenFD(fd)</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.address" title="server.address()">server.address()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.Socket" title="net.Socket">net.Socket</a><ul><li><a href="#socket.connect" title="socket.connect(port, [host], [callback])">socket.connect(port, [host], [callback])</a></li><li><a href="#socket.connect" title="socket.connect(path, [callback])">socket.connect(path, [callback])</a></li><li><a href="#socket.bufferSize" title="socket.bufferSize">socket.bufferSize</a></li><li><a href="#socket.setEncoding" title="socket.setEncoding(encoding=null)">socket.setEncoding(encoding=null)</a></li><li><a href="#socket.setSecure" title="socket.setSecure()">socket.setSecure()</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [callback])">socket.write(data, [encoding], [callback])</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [fileDescriptor], [callback])">socket.write(data, [encoding], [fileDescriptor], [callback])</a></li><li><a href="#socket.end" title="socket.end([data], [encoding])">socket.end([data], [encoding])</a></li><li><a href="#socket.destroy" title="socket.destroy()">socket.destroy()</a></li><li><a href="#socket.pause" title="socket.pause()">socket.pause()</a></li><li><a href="#socket.resume" title="socket.resume()">socket.resume()</a></li><li><a href="#socket.setTimeout" title="socket.setTimeout(timeout, [callback])">socket.setTimeout(timeout, [callback])</a></li><li><a href="#socket.setNoDelay" title="socket.setNoDelay(noDelay=true)">socket.setNoDelay(noDelay=true)</a></li><li><a href="#socket.setKeepAlive" title="socket.setKeepAlive(enable=false, [initialDelay])">socket.setKeepAlive(enable=false, [initialDelay])</a></li><li><a href="#socket.remoteAddress" title="socket.remoteAddress">socket.remoteAddress</a></li><li><a href="#event_connect_" title="Event: 'connect'">Event: 'connect'</a></li><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_timeout_" title="Event: 'timeout'">Event: 'timeout'</a></li><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.isIP" title="net.isIP">net.isIP</a><ul><li><a href="#net.isIP" title="net.isIP(input)">net.isIP(input)</a></li><li><a href="#net.isIPv4" title="net.isIPv4(input)">net.isIPv4(input)</a></li><li><a href="#net.isIPv6" title="net.isIPv6(input)">net.isIPv6(input)</a></li></ul></li></ul></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#net" title="net">net</a><ul><li><a href="#net.createServer" title="net.createServer([options], [connectionListener])">net.createServer([options], [connectionListener])</a></li><li><a href="#net.createConnection" title="net.createConnection(arguments...)">net.createConnection(arguments...)</a></li><li><a href="#net.Server" title="net.Server">net.Server</a><ul><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.listenFD" title="server.listenFD(fd)">server.listenFD(fd)</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.address" title="server.address()">server.address()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.Socket" title="net.Socket">net.Socket</a><ul><li><a href="#new_net.Socket" title="new net.Socket([options])">new net.Socket([options])</a></li><li><a href="#socket.connect" title="socket.connect(port, [host], [callback])">socket.connect(port, [host], [callback])</a></li><li><a href="#socket.connect" title="socket.connect(path, [callback])">socket.connect(path, [callback])</a></li><li><a href="#socket.bufferSize" title="socket.bufferSize">socket.bufferSize</a></li><li><a href="#socket.setEncoding" title="socket.setEncoding(encoding=null)">socket.setEncoding(encoding=null)</a></li><li><a href="#socket.setSecure" title="socket.setSecure()">socket.setSecure()</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [callback])">socket.write(data, [encoding], [callback])</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [fileDescriptor], [callback])">socket.write(data, [encoding], [fileDescriptor], [callback])</a></li><li><a href="#socket.end" title="socket.end([data], [encoding])">socket.end([data], [encoding])</a></li><li><a href="#socket.destroy" title="socket.destroy()">socket.destroy()</a></li><li><a href="#socket.pause" title="socket.pause()">socket.pause()</a></li><li><a href="#socket.resume" title="socket.resume()">socket.resume()</a></li><li><a href="#socket.setTimeout" title="socket.setTimeout(timeout, [callback])">socket.setTimeout(timeout, [callback])</a></li><li><a href="#socket.setNoDelay" title="socket.setNoDelay(noDelay=true)">socket.setNoDelay(noDelay=true)</a></li><li><a href="#socket.setKeepAlive" title="socket.setKeepAlive(enable=false, [initialDelay])">socket.setKeepAlive(enable=false, [initialDelay])</a></li><li><a href="#socket.remoteAddress" title="socket.remoteAddress">socket.remoteAddress</a></li><li><a href="#event_connect_" title="Event: 'connect'">Event: 'connect'</a></li><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_timeout_" title="Event: 'timeout'">Event: 'timeout'</a></li><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.isIP" title="net.isIP">net.isIP</a><ul><li><a href="#net.isIP" title="net.isIP(input)">net.isIP(input)</a></li><li><a href="#net.isIPv4" title="net.isIPv4(input)">net.isIPv4(input)</a></li><li><a href="#net.isIPv6" title="net.isIPv6(input)">net.isIPv6(input)</a></li></ul></li></ul></li></ul></div>
 <h2 id="net">net</h2>
 
 <p>The <code>net</code> module provides you with an asynchronous network wrapper. It contains
 methods for creating both servers and clients (called streams). You can include
 this module with <code>require("net");</code></p>
 
-<h3 id="net.createServer">net.createServer(connectionListener)</h3>
+<h3 id="net.createServer">net.createServer([options], [connectionListener])</h3>
 
 <p>Creates a new TCP server. The <code>connectionListener</code> argument is
 automatically set as a listener for the <code>'connection'</code> event.</p>
+
+<p><code>options</code> is an object with the following defaults:</p>
+
+<pre><code>{ allowHalfOpen: false
+}</code></pre>
+
+<p>If <code>allowHalfOpen</code> is <code>true</code>, then the socket won't automatically send FIN
+packet when the other end of the socket sends a FIN packet. The socket becomes
+non-readable, but still writable. You should call the end() method explicitly.
+See <code>'end'</code> event for more information.</p>
 
 <h3 id="net.createConnection">net.createConnection(arguments...)</h3>
 
@@ -161,6 +171,21 @@ and passed to the user through the <code>'connection'</code> event of a server.<
 
 <p><code>net.Socket</code> instances are EventEmitters with the following events:</p>
 
+<h4 id="new_net.Socket">new net.Socket([options])</h4>
+
+<p>Construct a new socket object.</p>
+
+<p><code>options</code> is an object with the following defaults:</p>
+
+<pre><code>{ fd: null
+  type: null
+  allowHalfOpen: false
+}</code></pre>
+
+<p><code>fd</code> allows you to specify the existing file descriptor of socket. <code>type</code>
+specified underlying protocol. It can be <code>'tcp4'</code>, <code>'tcp6'</code>, or <code>'unix'</code>.
+About <code>allowHalfOpen</code>, refer to <code>createServer()</code> and <code>'end'</code> event.</p>
+
 <h4 id="socket.connect">socket.connect(port, [host], [callback])</h4>
 
 <h4 id="socket.connect">socket.connect(path, [callback])</h4>
@@ -179,7 +204,7 @@ socket is established. If there is a problem connecting, the <code>'connect'</co
 event will not be emitted, the <code>'error'</code> event will be emitted with
 the exception.</p>
 
-<p>The <code>callback</code> paramenter will be added as an listener for the 'connect'
+<p>The <code>callback</code> parameter will be added as an listener for the 'connect'
 event.</p>
 
 <h4 id="socket.bufferSize">socket.bufferSize</h4>

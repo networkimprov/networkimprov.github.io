@@ -32,7 +32,8 @@ the V8 heap. A <code>Buffer</code> cannot be resized.</p>
 method.  Here are the different string encodings;</p>
 
 <ul><li><p><code>'ascii'</code> - for 7 bit ASCII data only.  This encoding method is very fast, and will
-strip the high bit if set.</p></li><li><p><code>'utf8'</code> - Unicode characters.  Many web pages and other document formats use UTF-8.</p></li><li><p><code>'base64'</code> - Base64 string encoding.</p></li><li><p><code>'binary'</code> - A way of encoding raw binary data into strings by using only
+strip the high bit if set.</p></li><li><p><code>'utf8'</code> - Multi byte encoded Unicode characters.  Many web pages and other document formats use UTF-8.</p></li><li><p><code>'ucs2'</code> - 2-bytes, little endian encoded Unicode characters. It can encode
+only BMP(Basic Multilingual Plane, U+0000 - U+FFFF).</p></li><li><p><code>'base64'</code> - Base64 string encoding.</p></li><li><p><code>'binary'</code> - A way of encoding raw binary data into strings by using only
 the first 8 bits of each character. This encoding method is depreciated and
 should be avoided in favor of <code>Buffer</code> objects where possible. This encoding
 will be removed in future versions of Node.</p></li><li><p><code>'hex'</code> - Encode each byte as two hexidecimal characters.</p></li></ul>

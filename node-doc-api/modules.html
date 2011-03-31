@@ -109,7 +109,7 @@ made to the process.</p>
 <code>/node_modules</code>.</p>
 
 <p>Second, if the file calling <code>require()</code> is already inside a <code>node_modules</code>
-heirarchy, then the top-most <code>node_modules</code> folder is treated as the
+hierarchy, then the top-most <code>node_modules</code> folder is treated as the
 root of the search tree.</p>
 
 <p>For example, if the file at
@@ -221,6 +221,10 @@ a colon-delimited list of absolute paths.  In the previous example,
 the <code>NODE_PATH</code> environment variable might have been set to:</p>
 
 <pre><code>/home/micheil/.node_modules:/usr/local/lib/node_modules</code></pre>
+
+<p>Loading from the <code>require.paths</code> locations is only performed if the
+module could not be found using the <code>node_modules</code> algorithm above.
+Global modules are lower priority than bundled dependencies.</p>
 
 <h4 id="_Note_Please_Avoid_Modifying_require.paths_">**Note:** Please Avoid Modifying `require.paths`</h4>
 

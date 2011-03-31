@@ -70,6 +70,11 @@ req.on('error', function(e) {
   console.error(e);
 });</code></pre>
 
+<p>The options argument has the following options</p>
+
+<ul><li>host: IP or domain of host to make request to. Defaults to <code>'localhost'</code>.</li><li>port: port of host to request to. Defaults to 443.</li><li>path: Path to request. Default <code>'/'</code>.</li><li>method: HTTP request method. Default <code>'GET'</code>.</li><li>key: Private key to use for SSL. Default <code>null</code>.</li><li>cert: Public x509 certificate to use. Default <code>null</code>.</li><li>ca: An authority certificate or array of authority certificates to check
+the remote host against.</li></ul>
+
 <h2 id="https.get">https.get(options, callback)</h2>
 
 <p>Like <code>http.get()</code> but for HTTPS.</p>
