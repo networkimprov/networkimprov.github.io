@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>os - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,7 +16,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#os_Module" title="os Module">os Module</a><ul><li><a href="#os.hostname" title="os.hostname()">os.hostname()</a></li><li><a href="#os.type" title="os.type()">os.type()</a></li><li><a href="#os.release" title="os.release()">os.release()</a></li><li><a href="#os.uptime" title="os.uptime()">os.uptime()</a></li><li><a href="#os.loadavg" title="os.loadavg()">os.loadavg()</a></li><li><a href="#os.totalmem" title="os.totalmem()">os.totalmem()</a></li><li><a href="#os.freemem" title="os.freemem()">os.freemem()</a></li><li><a href="#os.cpus" title="os.cpus()">os.cpus()</a></li><li><a href="#os.getNetworkInterfaces" title="os.getNetworkInterfaces()">os.getNetworkInterfaces()</a></li></ul></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#os_Module" title="os Module">os Module</a><ul><li><a href="#os.hostname" title="os.hostname()">os.hostname()</a></li><li><a href="#os.type" title="os.type()">os.type()</a></li><li><a href="#os.release" title="os.release()">os.release()</a></li><li><a href="#os.uptime" title="os.uptime()">os.uptime()</a></li><li><a href="#os.loadavg" title="os.loadavg()">os.loadavg()</a></li><li><a href="#os.totalmem" title="os.totalmem()">os.totalmem()</a></li><li><a href="#os.freemem" title="os.freemem()">os.freemem()</a></li><li><a href="#os.cpus" title="os.cpus()">os.cpus()</a></li></ul></li></ul></div>
 <h2 id="os_Module">os Module</h2>
 
 <p>Use <code>require('os')</code> to access this module.</p>
@@ -117,15 +119,6 @@
        sys: 34920,
        idle: 1072572010,
        irq: 30 } } ]</code></pre>
-
-<h3 id="os.getNetworkInterfaces">os.getNetworkInterfaces()</h3>
-
-<p>Get a list of network interfaces:</p>
-
-<pre><code>{ lo: { ip: '127.0.0.1', internal: true, ip6: '::1' },
-  eth0: { ip6: 'fe80::f2de:f1ff:fe19:ae7', internal: false },
-  wlan0: { ip: '10.0.1.118', internal: false, ip6: 'fe80::226:c7ff:fe7d:1602' },
-  vboxnet0: {} }</code></pre>
   </div>
   <script type="text/javascript" src="assets/sh_main.js"></script>
   <script type="text/javascript" src="assets/sh_javascript.min.js"></script>

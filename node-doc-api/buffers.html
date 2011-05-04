@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>buffers - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -34,9 +36,9 @@ method.  Here are the different string encodings;</p>
 <ul><li><p><code>'ascii'</code> - for 7 bit ASCII data only.  This encoding method is very fast, and will
 strip the high bit if set.</p></li><li><p><code>'utf8'</code> - Multi byte encoded Unicode characters.  Many web pages and other document formats use UTF-8.</p></li><li><p><code>'ucs2'</code> - 2-bytes, little endian encoded Unicode characters. It can encode
 only BMP(Basic Multilingual Plane, U+0000 - U+FFFF).</p></li><li><p><code>'base64'</code> - Base64 string encoding.</p></li><li><p><code>'binary'</code> - A way of encoding raw binary data into strings by using only
-the first 8 bits of each character. This encoding method is depreciated and
+the first 8 bits of each character. This encoding method is deprecated and
 should be avoided in favor of <code>Buffer</code> objects where possible. This encoding
-will be removed in future versions of Node.</p></li><li><p><code>'hex'</code> - Encode each byte as two hexidecimal characters.</p></li></ul>
+will be removed in future versions of Node.</p></li></ul>
 
 <h3 id="new_Buffer">new Buffer(size)</h3>
 
@@ -54,16 +56,18 @@ will be removed in future versions of Node.</p></li><li><p><code>'hex'</code> - 
 
 <p>Writes <code>string</code> to the buffer at <code>offset</code> using the given encoding. Returns
 number of octets written.  If <code>buffer</code> did not contain enough space to fit
-the entire string, it will write a partial amount of the string. In the case
-of <code>'utf8'</code> encoding, the method will not write partial characters.</p>
+the entire string, it will write a partial amount of the string.
+The method will not write partial characters.</p>
 
 <p>Example: write a utf8 string into a buffer, then print it</p>
 
 <pre><code>buf = new Buffer(256);
 len = buf.write('\u00bd + \u00bc = \u00be', 0);
-console.log(len + " bytes: " + buf.toString('utf8', 0, len));
+console.log(len + " bytes: " + buf.toString('utf8', 0, len));</code></pre>
 
-// 12 bytes: ½ + ¼ = ¾</code></pre>
+<p>The number of characters written (which may be different than the number of
+bytes written) is set in <code>Buffer._charsWritten</code> and will be overwritten the
+next time <code>buf.write()</code> is called.</p>
 
 <h3 id="buffer.toString">buffer.toString(encoding, start=0, end=buffer.length)</h3>
 

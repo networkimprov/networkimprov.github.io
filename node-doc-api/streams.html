@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>streams - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,7 +16,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#streams" title="Streams">Streams</a></li><li><a href="#readable_Stream" title="Readable Stream">Readable Stream</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_fd_" title="Event: 'fd'">Event: 'fd'</a></li><li><a href="#stream.readable" title="stream.readable">stream.readable</a></li><li><a href="#stream.setEncoding" title="stream.setEncoding(encoding)">stream.setEncoding(encoding)</a></li><li><a href="#stream.pause" title="stream.pause()">stream.pause()</a></li><li><a href="#stream.resume" title="stream.resume()">stream.resume()</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li><li><a href="#stream.destroySoon" title="stream.destroySoon()">stream.destroySoon()</a></li><li><a href="#stream.pipe" title="stream.pipe(destination, [options])">stream.pipe(destination, [options])</a></li></ul></li><li><a href="#writable_Stream" title="Writable Stream">Writable Stream</a><ul><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_pipe_" title="Event: 'pipe'">Event: 'pipe'</a></li><li><a href="#stream.writable" title="stream.writable">stream.writable</a></li><li><a href="#stream.write" title="stream.write(string, encoding='utf8', [fd])">stream.write(string, encoding='utf8', [fd])</a></li><li><a href="#stream.write" title="stream.write(buffer)">stream.write(buffer)</a></li><li><a href="#stream.end" title="stream.end()">stream.end()</a></li><li><a href="#stream.end" title="stream.end(string, encoding)">stream.end(string, encoding)</a></li><li><a href="#stream.end" title="stream.end(buffer)">stream.end(buffer)</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li></ul></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#streams" title="Streams">Streams</a></li><li><a href="#readable_Stream" title="Readable Stream">Readable Stream</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_fd_" title="Event: 'fd'">Event: 'fd'</a></li><li><a href="#stream.readable" title="stream.readable">stream.readable</a></li><li><a href="#stream.setEncoding" title="stream.setEncoding(encoding)">stream.setEncoding(encoding)</a></li><li><a href="#stream.pause" title="stream.pause()">stream.pause()</a></li><li><a href="#stream.resume" title="stream.resume()">stream.resume()</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li><li><a href="#stream.destroySoon" title="stream.destroySoon()">stream.destroySoon()</a></li><li><a href="#stream.pipe" title="stream.pipe(destination, [options])">stream.pipe(destination, [options])</a></li></ul></li><li><a href="#writable_Stream" title="Writable Stream">Writable Stream</a><ul><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_pipe_" title="Event: 'pipe'">Event: 'pipe'</a></li><li><a href="#stream.writable" title="stream.writable">stream.writable</a></li><li><a href="#stream.write" title="stream.write(string, encoding='utf8', [fd])">stream.write(string, encoding='utf8', [fd])</a></li><li><a href="#stream.write" title="stream.write(buffer)">stream.write(buffer)</a></li><li><a href="#stream.end" title="stream.end()">stream.end()</a></li><li><a href="#stream.end" title="stream.end(string, encoding)">stream.end(string, encoding)</a></li><li><a href="#stream.end" title="stream.end(buffer)">stream.end(buffer)</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li><li><a href="#stream.destroySoon" title="stream.destroySoon()">stream.destroySoon()</a></li></ul></li></ul></div>
 <h2 id="streams">Streams</h2>
 
 <p>A stream is an abstract interface implemented by various objects in Node.
@@ -186,6 +188,12 @@ or FIN. This is useful to reduce the number of packets sent.</p>
 <h3 id="stream.destroy">stream.destroy()</h3>
 
 <p>Closes the underlying file descriptor. Stream will not emit any more events.</p>
+
+<h3 id="stream.destroySoon">stream.destroySoon()</h3>
+
+<p>After the write queue is drained, close the file descriptor. <code>destroySoon()</code>
+can still destroy straight away, as long as there is no data left in the queue
+for writes.</p>
   </div>
   <script type="text/javascript" src="assets/sh_main.js"></script>
   <script type="text/javascript" src="assets/sh_javascript.min.js"></script>

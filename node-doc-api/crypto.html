@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>crypto - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -42,6 +44,24 @@ which can be used to generate hash digests.</p>
 <p><code>algorithm</code> is dependent on the available algorithms supported by the version
 of OpenSSL on the platform. Examples are <code>'sha1'</code>, <code>'md5'</code>, <code>'sha256'</code>, <code>'sha512'</code>, etc.
 On recent releases, <code>openssl list-message-digest-algorithms</code> will display the available digest algorithms.</p>
+
+<p>Example: this program that takes the sha1 sum of a file</p>
+
+<pre><code>var filename = process.argv[2];
+var crypto = require('crypto');
+var fs = require('fs');
+
+var shasum = crypto.createHash('sha1');
+
+var s = fs.ReadStream(filename);
+s.on('data', function(d) {
+  shasum.update(d);
+});
+
+s.on('end', function() {
+  var d = shasum.digest('hex');
+  console.log(d + '  ' + filename);
+});</code></pre>
 
 <h3 id="hash.update">hash.update(data)</h3>
 
@@ -135,7 +155,7 @@ This can be called many times with new data as it is streamed.</p>
 <h3 id="verifier.verify">verifier.verify(cert, signature, signature_format='binary')</h3>
 
 <p>Verifies the signed data by using the <code>cert</code> which is a string containing
-the PEM encoded public key, and <code>signature</code>, which is the previously calculates
+the PEM encoded certificate, and <code>signature</code>, which is the previously calculates
 signature for the data, in the <code>signature_format</code> which can be <code>'binary'</code>, <code>'hex'</code> or <code>'base64'</code>.</p>
 
 <p>Returns true or false depending on the validity of the signature for the data and public key.</p>

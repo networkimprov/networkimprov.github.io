@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>https - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,7 +16,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#hTTPS" title="HTTPS">HTTPS</a></li><li><a href="#https.Server" title="https.Server">https.Server</a></li><li><a href="#https.createServer" title="https.createServer">https.createServer</a></li><li><a href="#https.request" title="https.request(options, callback)">https.request(options, callback)</a></li><li><a href="#https.get" title="https.get(options, callback)">https.get(options, callback)</a></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#hTTPS" title="HTTPS">HTTPS</a></li><li><a href="#https.Server" title="https.Server">https.Server</a></li><li><a href="#https.createServer" title="https.createServer(options, [requestListener])">https.createServer(options, [requestListener])</a></li><li><a href="#https.request" title="https.request(options, callback)">https.request(options, callback)</a></li><li><a href="#https.get" title="https.get(options, callback)">https.get(options, callback)</a></li></ul></div>
 <h2 id="hTTPS">HTTPS</h2>
 
 <p>HTTPS is the HTTP protocol over TLS/SSL. In Node this is implemented as a
@@ -22,7 +24,14 @@ separate module.</p>
 
 <h2 id="https.Server">https.Server</h2>
 
-<h2 id="https.createServer">https.createServer</h2>
+<p>This class is a subclass of <code>tls.Server</code> and emits events same as
+<code>http.Server</code>. See <code>http.Server</code> for more information.</p>
+
+<h2 id="https.createServer">https.createServer(options, [requestListener])</h2>
+
+<p>Returns a new HTTPS web server object. The <code>options</code> is similer to
+<code>tls.createServer()</code>. The <code>requestListener</code> is a function which is
+automatically added to the <code>'request'</code> event.</p>
 
 <p>Example:</p>
 

@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>tls - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,7 +16,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#tLS_" title="TLS (SSL)">TLS (SSL)</a><ul><li><a href="#s_tls.connect" title="s = tls.connect(port, [host], [options], callback)">s = tls.connect(port, [host], [options], callback)</a></li><li><a href="#tls.Server" title="tls.Server">tls.Server</a><ul><li><a href="#tls.createServer" title="tls.createServer(options, secureConnectionListener)">tls.createServer(options, secureConnectionListener)</a></li><li><a href="#event_secureConnection_" title="Event: 'secureConnection'">Event: 'secureConnection'</a></li><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li></ul></li></ul></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#tLS_" title="TLS (SSL)">TLS (SSL)</a><ul><li><a href="#s_tls.connect" title="s = tls.connect(port, [host], [options], callback)">s = tls.connect(port, [host], [options], callback)</a></li><li><a href="#sTARTTLS" title="STARTTLS">STARTTLS</a></li><li><a href="#tls.Server" title="tls.Server">tls.Server</a><ul><li><a href="#tls.createServer" title="tls.createServer(options, secureConnectionListener)">tls.createServer(options, secureConnectionListener)</a></li><li><a href="#event_secureConnection_" title="Event: 'secureConnection'">Event: 'secureConnection'</a></li><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li></ul></li></ul></li></ul></div>
 <h2 id="tLS_">TLS (SSL)</h2>
 
 <p>Use <code>require('tls')</code> to access this module.</p>
@@ -61,6 +63,16 @@ called no matter if the server's certificate was authorized or not. It is up
 to the user to test <code>s.authorized</code> to see if the server certificate was
 signed by one of the specified CAs. If <code>s.authorized === false</code> then the error
 can be found in <code>s.authorizationError</code>.</p>
+
+<h3 id="sTARTTLS">STARTTLS</h3>
+
+<p>In the v0.4 branch no function exists for starting a TLS session on an
+already existing TCP connection.  This is possible it just requires a bit of
+work. The technique is to use <code>tls.createSecurePair()</code> which returns two
+streams: an encrypted stream and a plaintext stream. The encrypted stream is then
+piped to the socket, the plaintext stream is what the user interacts with thereafter.</p>
+
+<p><a href="http://gist.github.com/848444">Here is some code that does it.</a></p>
 
 <h3 id="tls.Server">tls.Server</h3>
 

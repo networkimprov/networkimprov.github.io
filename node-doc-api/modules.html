@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>modules - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,10 +16,8 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#modules" title="Modules">Modules</a><ul><li><a href="#core_Modules" title="Core Modules">Core Modules</a></li><li><a href="#file_Modules" title="File Modules">File Modules</a></li><li><a href="#loading_from_node_modules_Folders" title="Loading from `node_modules` Folders">Loading from `node_modules` Folders</a><ul><li><a href="#optimizations_to_the_node_modules_Lookup_Process" title="Optimizations to the `node_modules` Lookup Process">Optimizations to the `node_modules` Lookup Process</a></li></ul></li><li><a href="#folders_as_Modules" title="Folders as Modules">Folders as Modules</a></li><li><a href="#caching" title="Caching">Caching</a></li><li><a href="#all_Together..." title="All Together...">All Together...</a></li><li><a href="#loading_from_the_require.paths_Folders" title="Loading from the `require.paths` Folders">Loading from the `require.paths` Folders</a><ul><li><a href="#note_Please_Avoid_Modifying_require.paths_" title="Note:** Please Avoid Modifying `require.paths`">Note:** Please Avoid Modifying `require.paths`</a><ul><li><a href="#setting_require.paths_to_some_other_value_does_nothing." title="Setting `require.paths` to some other value does nothing.">Setting `require.paths` to some other value does nothing.</a></li><li><a href="#putting_relative_paths_in_require.paths_is..._weird." title="Putting relative paths in `require.paths` is... weird.">Putting relative paths in `require.paths` is... weird.</a></li><li><a href="#zero_Isolation" title="Zero Isolation">Zero Isolation</a></li></ul></li></ul></li></ul></li><li><a href="#addenda_Package_Manager_Tips" title="Addenda: Package Manager Tips">Addenda: Package Manager Tips</a></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#modules" title="Modules">Modules</a><ul><li><a href="#core_Modules" title="Core Modules">Core Modules</a></li><li><a href="#file_Modules" title="File Modules">File Modules</a></li><li><a href="#loading_from_node_modules_Folders" title="Loading from `node_modules` Folders">Loading from `node_modules` Folders</a><ul><li><a href="#optimizations_to_the_node_modules_Lookup_Process" title="Optimizations to the `node_modules` Lookup Process">Optimizations to the `node_modules` Lookup Process</a></li></ul></li><li><a href="#folders_as_Modules" title="Folders as Modules">Folders as Modules</a></li><li><a href="#caching" title="Caching">Caching</a></li><li><a href="#module.exports" title="module.exports">module.exports</a></li><li><a href="#all_Together..." title="All Together...">All Together...</a></li><li><a href="#loading_from_the_require.paths_Folders" title="Loading from the `require.paths` Folders">Loading from the `require.paths` Folders</a><ul><li><a href="#note_Please_Avoid_Modifying_require.paths_" title="Note:** Please Avoid Modifying `require.paths`">Note:** Please Avoid Modifying `require.paths`</a><ul><li><a href="#setting_require.paths_to_some_other_value_does_nothing." title="Setting `require.paths` to some other value does nothing.">Setting `require.paths` to some other value does nothing.</a></li><li><a href="#putting_relative_paths_in_require.paths_is..._weird." title="Putting relative paths in `require.paths` is... weird.">Putting relative paths in `require.paths` is... weird.</a></li><li><a href="#zero_Isolation" title="Zero Isolation">Zero Isolation</a></li></ul></li></ul></li></ul></li><li><a href="#addenda_Package_Manager_Tips" title="Addenda: Package Manager Tips">Addenda: Package Manager Tips</a></li></ul></div>
 <h2 id="modules">Modules</h2>
-
-<p>Node uses the CommonJS module system.</p>
 
 <p>Node has a simple module loading system.  In Node, files and modules are in
 one-to-one correspondence.  As an example, <code>foo.js</code> loads the module
@@ -151,6 +151,44 @@ example, then <code>require('./some-library')</code> would attempt to load:</p>
 <p>Modules are cached after the first time they are loaded.  This means
 (among other things) that every call to <code>require('foo')</code> will get
 exactly the same object returned, if it would resolve to the same file.</p>
+
+<h3 id="module.exports">module.exports</h3>
+
+<p>The <code>exports</code> object is created by the Module system. Sometimes this is not
+acceptable, many want their module to be an instance of some class. To do this
+assign the desired export object to <code>module.exports</code>. For example suppose we
+were making a module called <code>a.js</code></p>
+
+<pre><code>var EventEmitter = require('events').EventEmitter;
+
+module.exports = new EventEmitter();
+
+// Do some work, and after some time emit
+// the 'ready' event from the module itself.
+setTimeout(function() {
+  module.exports.emit('ready');
+}, 1000);</code></pre>
+
+<p>Then in another file we could do</p>
+
+<pre><code>var a = require('./a');
+a.on('ready', function() {
+  console.log('module a is ready');
+});</code></pre>
+
+<p>Note that assignment to <code>module.exports</code> must be done immediately. It cannot be
+done in any callbacks.  This does not work:</p>
+
+<p>x.js:</p>
+
+<pre><code>setTimeout(function() {
+  module.exports = { a: "hello" };
+}, 0);</code></pre>
+
+<p>y.js</p>
+
+<pre><code>var x = require('./x');
+console.log(x.a);</code></pre>
 
 <h3 id="all_Together...">All Together...</h3>
 

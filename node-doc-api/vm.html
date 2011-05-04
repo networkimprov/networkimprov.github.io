@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>vm - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -49,7 +51,7 @@ console.log('localVar: ' + localVar + ', evaled: ' +
 <code>eval</code> does have access to the local scope, so <code>localVar</code> is changed.</p>
 
 <p>In case of syntax error in <code>code</code>, <code>vm.runInThisContext</code> emits the syntax error to stderr
-and throws.an exception.</p>
+and throws an exception.</p>
 
 <h3 id="vm.runInNewContext">vm.runInNewContext(code, [sandbox], [filename])</h3>
 
@@ -77,7 +79,7 @@ console.log(util.inspect(sandbox));
 global variable leakage, <code>vm.runInNewContext</code> is quite useful, but safely running untrusted code
 requires a separate process.</p>
 
-<p>In case of syntax error in <code>code</code>, <code>vm.runInThisContext</code> emits the syntax error to stderr
+<p>In case of syntax error in <code>code</code>, <code>vm.runInNewContext</code> emits the syntax error to stderr
 and throws an exception.</p>
 
 <h3 id="vm.createScript">vm.createScript(code, [filename])</h3>

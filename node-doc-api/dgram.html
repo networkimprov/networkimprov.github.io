@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>dgram - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -140,7 +142,6 @@ client.bind(clientPath);</code></pre>
 <pre><code>var dgram = require("dgram");
 
 var server = dgram.createSocket("udp4");
-var messageToSend = new Buffer("A message to send");
 
 server.on("message", function (msg, rinfo) {
   console.log("server got: " + msg + " from " +

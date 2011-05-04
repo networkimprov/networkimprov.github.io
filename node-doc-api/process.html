@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>process - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,7 +16,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#process" title="process">process</a><ul><li><a href="#event_exit_" title="Event: 'exit'">Event: 'exit'</a></li><li><a href="#event_uncaughtException_" title="Event: 'uncaughtException'">Event: 'uncaughtException'</a></li><li><a href="#signal_Events" title="Signal Events">Signal Events</a></li><li><a href="#process.stdout" title="process.stdout">process.stdout</a></li><li><a href="#process.stderr" title="process.stderr">process.stderr</a></li><li><a href="#process.stdin" title="process.stdin">process.stdin</a></li><li><a href="#process.argv" title="process.argv">process.argv</a></li><li><a href="#process.execPath" title="process.execPath">process.execPath</a></li><li><a href="#process.chdir" title="process.chdir(directory)">process.chdir(directory)</a></li><li><a href="#process.cwd" title="process.cwd()">process.cwd()</a></li><li><a href="#process.env" title="process.env">process.env</a></li><li><a href="#process.exit" title="process.exit(code=0)">process.exit(code=0)</a></li><li><a href="#process.getgid" title="process.getgid()">process.getgid()</a></li><li><a href="#process.setgid" title="process.setgid(id)">process.setgid(id)</a></li><li><a href="#process.getuid" title="process.getuid()">process.getuid()</a></li><li><a href="#process.setuid" title="process.setuid(id)">process.setuid(id)</a></li><li><a href="#process.version" title="process.version">process.version</a></li><li><a href="#process.installPrefix" title="process.installPrefix">process.installPrefix</a></li><li><a href="#process.kill" title="process.kill(pid, signal='SIGTERM')">process.kill(pid, signal='SIGTERM')</a></li><li><a href="#process.pid" title="process.pid">process.pid</a></li><li><a href="#process.title" title="process.title">process.title</a></li><li><a href="#process.platform" title="process.platform">process.platform</a></li><li><a href="#process.memoryUsage" title="process.memoryUsage()">process.memoryUsage()</a></li><li><a href="#process.nextTick" title="process.nextTick(callback)">process.nextTick(callback)</a></li><li><a href="#process.umask" title="process.umask([mask])">process.umask([mask])</a></li><li><a href="#process.uptime" title="process.uptime()">process.uptime()</a></li></ul></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#process" title="process">process</a><ul><li><a href="#event_exit_" title="Event: 'exit'">Event: 'exit'</a></li><li><a href="#event_uncaughtException_" title="Event: 'uncaughtException'">Event: 'uncaughtException'</a></li><li><a href="#signal_Events" title="Signal Events">Signal Events</a></li><li><a href="#process.stdout" title="process.stdout">process.stdout</a></li><li><a href="#process.stderr" title="process.stderr">process.stderr</a></li><li><a href="#process.stdin" title="process.stdin">process.stdin</a></li><li><a href="#process.argv" title="process.argv">process.argv</a></li><li><a href="#process.execPath" title="process.execPath">process.execPath</a></li><li><a href="#process.chdir" title="process.chdir(directory)">process.chdir(directory)</a></li><li><a href="#process.cwd" title="process.cwd()">process.cwd()</a></li><li><a href="#process.env" title="process.env">process.env</a></li><li><a href="#process.exit" title="process.exit(code=0)">process.exit(code=0)</a></li><li><a href="#process.getgid" title="process.getgid()">process.getgid()</a></li><li><a href="#process.setgid" title="process.setgid(id)">process.setgid(id)</a></li><li><a href="#process.getuid" title="process.getuid()">process.getuid()</a></li><li><a href="#process.setuid" title="process.setuid(id)">process.setuid(id)</a></li><li><a href="#process.version" title="process.version">process.version</a></li><li><a href="#process.installPrefix" title="process.installPrefix">process.installPrefix</a></li><li><a href="#process.kill" title="process.kill(pid, signal='SIGTERM')">process.kill(pid, signal='SIGTERM')</a></li><li><a href="#process.pid" title="process.pid">process.pid</a></li><li><a href="#process.title" title="process.title">process.title</a></li><li><a href="#process.platform" title="process.platform">process.platform</a></li><li><a href="#process.memoryUsage" title="process.memoryUsage()">process.memoryUsage()</a></li><li><a href="#process.nextTick" title="process.nextTick(callback)">process.nextTick(callback)</a></li><li><a href="#process.umask" title="process.umask([mask])">process.umask([mask])</a></li></ul></li></ul></div>
 <h2 id="process">process</h2>
 
 <p>The <code>process</code> object is a global object and can be accessed from anywhere.
@@ -312,10 +314,6 @@ given, otherwise returns the current mask.</p>
 oldmask = process.umask(newmask);
 console.log('Changed umask from: ' + oldmask.toString(8) +
             ' to ' + newmask.toString(8));</code></pre>
-
-<h3 id="process.uptime">process.uptime()</h3>
-
-<p>Number of seconds Node has been running.</p>
   </div>
   <script type="text/javascript" src="assets/sh_main.js"></script>
   <script type="text/javascript" src="assets/sh_javascript.min.js"></script>

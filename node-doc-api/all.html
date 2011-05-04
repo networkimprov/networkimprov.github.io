@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>all - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,7 +16,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#synopsis" title="Synopsis">Synopsis</a></li><li><a href="#global_Objects" title="Global Objects">Global Objects</a><ul><li><a href="#global" title="global">global</a></li><li><a href="#process" title="process">process</a></li><li><a href="#require" title="require()">require()</a></li><li><a href="#require.resolve" title="require.resolve()">require.resolve()</a></li><li><a href="#require.paths" title="require.paths">require.paths</a></li><li><a href="#__filename" title="__filename">__filename</a></li><li><a href="#__dirname" title="__dirname">__dirname</a></li><li><a href="#module" title="module">module</a></li></ul></li><li><a href="#timers" title="Timers">Timers</a><ul><li><a href="#setTimeout" title="setTimeout(callback, delay, [arg], [...])">setTimeout(callback, delay, [arg], [...])</a></li><li><a href="#clearTimeout" title="clearTimeout(timeoutId)">clearTimeout(timeoutId)</a></li><li><a href="#setInterval" title="setInterval(callback, delay, [arg], [...])">setInterval(callback, delay, [arg], [...])</a></li><li><a href="#clearInterval" title="clearInterval(intervalId)">clearInterval(intervalId)</a></li></ul></li><li><a href="#modules" title="Modules">Modules</a><ul><li><a href="#core_Modules" title="Core Modules">Core Modules</a></li><li><a href="#file_Modules" title="File Modules">File Modules</a></li><li><a href="#loading_from_node_modules_Folders" title="Loading from `node_modules` Folders">Loading from `node_modules` Folders</a><ul><li><a href="#optimizations_to_the_node_modules_Lookup_Process" title="Optimizations to the `node_modules` Lookup Process">Optimizations to the `node_modules` Lookup Process</a></li></ul></li><li><a href="#folders_as_Modules" title="Folders as Modules">Folders as Modules</a></li><li><a href="#caching" title="Caching">Caching</a></li><li><a href="#all_Together..." title="All Together...">All Together...</a></li><li><a href="#loading_from_the_require.paths_Folders" title="Loading from the `require.paths` Folders">Loading from the `require.paths` Folders</a><ul><li><a href="#note_Please_Avoid_Modifying_require.paths_" title="Note:** Please Avoid Modifying `require.paths`">Note:** Please Avoid Modifying `require.paths`</a><ul><li><a href="#setting_require.paths_to_some_other_value_does_nothing." title="Setting `require.paths` to some other value does nothing.">Setting `require.paths` to some other value does nothing.</a></li><li><a href="#putting_relative_paths_in_require.paths_is..._weird." title="Putting relative paths in `require.paths` is... weird.">Putting relative paths in `require.paths` is... weird.</a></li><li><a href="#zero_Isolation" title="Zero Isolation">Zero Isolation</a></li></ul></li></ul></li></ul></li><li><a href="#addenda_Package_Manager_Tips" title="Addenda: Package Manager Tips">Addenda: Package Manager Tips</a></li><li><a href="#addons" title="Addons">Addons</a></li><li><a href="#process" title="process">process</a><ul><li><a href="#event_exit_" title="Event: 'exit'">Event: 'exit'</a></li><li><a href="#event_uncaughtException_" title="Event: 'uncaughtException'">Event: 'uncaughtException'</a></li><li><a href="#signal_Events" title="Signal Events">Signal Events</a></li><li><a href="#process.stdout" title="process.stdout">process.stdout</a></li><li><a href="#process.stderr" title="process.stderr">process.stderr</a></li><li><a href="#process.stdin" title="process.stdin">process.stdin</a></li><li><a href="#process.argv" title="process.argv">process.argv</a></li><li><a href="#process.execPath" title="process.execPath">process.execPath</a></li><li><a href="#process.chdir" title="process.chdir(directory)">process.chdir(directory)</a></li><li><a href="#process.cwd" title="process.cwd()">process.cwd()</a></li><li><a href="#process.env" title="process.env">process.env</a></li><li><a href="#process.exit" title="process.exit(code=0)">process.exit(code=0)</a></li><li><a href="#process.getgid" title="process.getgid()">process.getgid()</a></li><li><a href="#process.setgid" title="process.setgid(id)">process.setgid(id)</a></li><li><a href="#process.getuid" title="process.getuid()">process.getuid()</a></li><li><a href="#process.setuid" title="process.setuid(id)">process.setuid(id)</a></li><li><a href="#process.version" title="process.version">process.version</a></li><li><a href="#process.installPrefix" title="process.installPrefix">process.installPrefix</a></li><li><a href="#process.kill" title="process.kill(pid, signal='SIGTERM')">process.kill(pid, signal='SIGTERM')</a></li><li><a href="#process.pid" title="process.pid">process.pid</a></li><li><a href="#process.title" title="process.title">process.title</a></li><li><a href="#process.platform" title="process.platform">process.platform</a></li><li><a href="#process.memoryUsage" title="process.memoryUsage()">process.memoryUsage()</a></li><li><a href="#process.nextTick" title="process.nextTick(callback)">process.nextTick(callback)</a></li><li><a href="#process.umask" title="process.umask([mask])">process.umask([mask])</a></li><li><a href="#process.uptime" title="process.uptime()">process.uptime()</a></li></ul></li><li><a href="#util" title="util">util</a><ul><li><a href="#util.debug" title="util.debug(string)">util.debug(string)</a></li><li><a href="#util.log" title="util.log(string)">util.log(string)</a></li><li><a href="#util.inspect" title="util.inspect(object, showHidden=false, depth=2)">util.inspect(object, showHidden=false, depth=2)</a></li><li><a href="#util.pump" title="util.pump(readableStream, writableStream, [callback])">util.pump(readableStream, writableStream, [callback])</a></li><li><a href="#util.inherits" title="util.inherits(constructor, superConstructor)">util.inherits(constructor, superConstructor)</a></li></ul></li><li><a href="#events" title="Events">Events</a><ul><li><a href="#events.EventEmitter" title="events.EventEmitter">events.EventEmitter</a><ul><li><a href="#emitter.addListener" title="emitter.addListener(event, listener)">emitter.addListener(event, listener)</a></li><li><a href="#emitter.on" title="emitter.on(event, listener)">emitter.on(event, listener)</a></li><li><a href="#emitter.once" title="emitter.once(event, listener)">emitter.once(event, listener)</a></li><li><a href="#emitter.removeListener" title="emitter.removeListener(event, listener)">emitter.removeListener(event, listener)</a></li><li><a href="#emitter.removeAllListeners" title="emitter.removeAllListeners(event)">emitter.removeAllListeners(event)</a></li><li><a href="#emitter.setMaxListeners" title="emitter.setMaxListeners(n)">emitter.setMaxListeners(n)</a></li><li><a href="#emitter.listeners" title="emitter.listeners(event)">emitter.listeners(event)</a></li><li><a href="#emitter.emit" title="emitter.emit(event, [arg1], [arg2], [...])">emitter.emit(event, [arg1], [arg2], [...])</a></li><li><a href="#event_newListener_" title="Event: 'newListener'">Event: 'newListener'</a></li></ul></li></ul></li><li><a href="#buffers" title="Buffers">Buffers</a><ul><li><a href="#new_Buffer" title="new Buffer(size)">new Buffer(size)</a></li><li><a href="#new_Buffer" title="new Buffer(array)">new Buffer(array)</a></li><li><a href="#new_Buffer" title="new Buffer(str, encoding='utf8')">new Buffer(str, encoding='utf8')</a></li><li><a href="#buffer.write" title="buffer.write(string, offset=0, encoding='utf8')">buffer.write(string, offset=0, encoding='utf8')</a></li><li><a href="#buffer.toString" title="buffer.toString(encoding, start=0, end=buffer.length)">buffer.toString(encoding, start=0, end=buffer.length)</a></li><li><a href="#buffer_index_" title="buffer[index]">buffer[index]</a></li><li><a href="#buffer.isBuffer" title="Buffer.isBuffer(obj)">Buffer.isBuffer(obj)</a></li><li><a href="#buffer.byteLength" title="Buffer.byteLength(string, encoding='utf8')">Buffer.byteLength(string, encoding='utf8')</a></li><li><a href="#buffer.length" title="buffer.length">buffer.length</a></li><li><a href="#buffer.copy" title="buffer.copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)">buffer.copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)</a></li><li><a href="#buffer.slice" title="buffer.slice(start, end=buffer.length)">buffer.slice(start, end=buffer.length)</a></li></ul></li><li><a href="#streams" title="Streams">Streams</a></li><li><a href="#readable_Stream" title="Readable Stream">Readable Stream</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_fd_" title="Event: 'fd'">Event: 'fd'</a></li><li><a href="#stream.readable" title="stream.readable">stream.readable</a></li><li><a href="#stream.setEncoding" title="stream.setEncoding(encoding)">stream.setEncoding(encoding)</a></li><li><a href="#stream.pause" title="stream.pause()">stream.pause()</a></li><li><a href="#stream.resume" title="stream.resume()">stream.resume()</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li><li><a href="#stream.destroySoon" title="stream.destroySoon()">stream.destroySoon()</a></li><li><a href="#stream.pipe" title="stream.pipe(destination, [options])">stream.pipe(destination, [options])</a></li></ul></li><li><a href="#writable_Stream" title="Writable Stream">Writable Stream</a><ul><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_pipe_" title="Event: 'pipe'">Event: 'pipe'</a></li><li><a href="#stream.writable" title="stream.writable">stream.writable</a></li><li><a href="#stream.write" title="stream.write(string, encoding='utf8', [fd])">stream.write(string, encoding='utf8', [fd])</a></li><li><a href="#stream.write" title="stream.write(buffer)">stream.write(buffer)</a></li><li><a href="#stream.end" title="stream.end()">stream.end()</a></li><li><a href="#stream.end" title="stream.end(string, encoding)">stream.end(string, encoding)</a></li><li><a href="#stream.end" title="stream.end(buffer)">stream.end(buffer)</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li></ul></li><li><a href="#crypto" title="Crypto">Crypto</a><ul><li><a href="#crypto.createCredentials" title="crypto.createCredentials(details)">crypto.createCredentials(details)</a></li><li><a href="#crypto.createHash" title="crypto.createHash(algorithm)">crypto.createHash(algorithm)</a></li><li><a href="#hash.update" title="hash.update(data)">hash.update(data)</a></li><li><a href="#hash.digest" title="hash.digest(encoding='binary')">hash.digest(encoding='binary')</a></li><li><a href="#crypto.createHmac" title="crypto.createHmac(algorithm, key)">crypto.createHmac(algorithm, key)</a></li><li><a href="#hmac.update" title="hmac.update(data)">hmac.update(data)</a></li><li><a href="#hmac.digest" title="hmac.digest(encoding='binary')">hmac.digest(encoding='binary')</a></li><li><a href="#crypto.createCipher" title="crypto.createCipher(algorithm, key)">crypto.createCipher(algorithm, key)</a></li><li><a href="#cipher.update" title="cipher.update(data, input_encoding='binary', output_encoding='binary')">cipher.update(data, input_encoding='binary', output_encoding='binary')</a></li><li><a href="#cipher.final" title="cipher.final(output_encoding='binary')">cipher.final(output_encoding='binary')</a></li><li><a href="#crypto.createDecipher" title="crypto.createDecipher(algorithm, key)">crypto.createDecipher(algorithm, key)</a></li><li><a href="#decipher.update" title="decipher.update(data, input_encoding='binary', output_encoding='binary')">decipher.update(data, input_encoding='binary', output_encoding='binary')</a></li><li><a href="#decipher.final" title="decipher.final(output_encoding='binary')">decipher.final(output_encoding='binary')</a></li><li><a href="#crypto.createSign" title="crypto.createSign(algorithm)">crypto.createSign(algorithm)</a></li><li><a href="#signer.update" title="signer.update(data)">signer.update(data)</a></li><li><a href="#signer.sign" title="signer.sign(private_key, output_format='binary')">signer.sign(private_key, output_format='binary')</a></li><li><a href="#crypto.createVerify" title="crypto.createVerify(algorithm)">crypto.createVerify(algorithm)</a></li><li><a href="#verifier.update" title="verifier.update(data)">verifier.update(data)</a></li><li><a href="#verifier.verify" title="verifier.verify(cert, signature, signature_format='binary')">verifier.verify(cert, signature, signature_format='binary')</a></li></ul></li><li><a href="#tLS_" title="TLS (SSL)">TLS (SSL)</a><ul><li><a href="#s_tls.connect" title="s = tls.connect(port, [host], [options], callback)">s = tls.connect(port, [host], [options], callback)</a></li><li><a href="#tls.Server" title="tls.Server">tls.Server</a><ul><li><a href="#tls.createServer" title="tls.createServer(options, secureConnectionListener)">tls.createServer(options, secureConnectionListener)</a></li><li><a href="#event_secureConnection_" title="Event: 'secureConnection'">Event: 'secureConnection'</a></li><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li></ul></li></ul></li><li><a href="#file_System" title="File System">File System</a><ul><li><a href="#fs.rename" title="fs.rename(path1, path2, [callback])">fs.rename(path1, path2, [callback])</a></li><li><a href="#fs.renameSync" title="fs.renameSync(path1, path2)">fs.renameSync(path1, path2)</a></li><li><a href="#fs.truncate" title="fs.truncate(fd, len, [callback])">fs.truncate(fd, len, [callback])</a></li><li><a href="#fs.truncateSync" title="fs.truncateSync(fd, len)">fs.truncateSync(fd, len)</a></li><li><a href="#fs.chmod" title="fs.chmod(path, mode, [callback])">fs.chmod(path, mode, [callback])</a></li><li><a href="#fs.chmodSync" title="fs.chmodSync(path, mode)">fs.chmodSync(path, mode)</a></li><li><a href="#fs.stat" title="fs.stat(path, [callback])">fs.stat(path, [callback])</a></li><li><a href="#fs.lstat" title="fs.lstat(path, [callback])">fs.lstat(path, [callback])</a></li><li><a href="#fs.fstat" title="fs.fstat(fd, [callback])">fs.fstat(fd, [callback])</a></li><li><a href="#fs.statSync" title="fs.statSync(path)">fs.statSync(path)</a></li><li><a href="#fs.lstatSync" title="fs.lstatSync(path)">fs.lstatSync(path)</a></li><li><a href="#fs.fstatSync" title="fs.fstatSync(fd)">fs.fstatSync(fd)</a></li><li><a href="#fs.link" title="fs.link(srcpath, dstpath, [callback])">fs.link(srcpath, dstpath, [callback])</a></li><li><a href="#fs.linkSync" title="fs.linkSync(srcpath, dstpath)">fs.linkSync(srcpath, dstpath)</a></li><li><a href="#fs.symlink" title="fs.symlink(linkdata, path, [callback])">fs.symlink(linkdata, path, [callback])</a></li><li><a href="#fs.symlinkSync" title="fs.symlinkSync(linkdata, path)">fs.symlinkSync(linkdata, path)</a></li><li><a href="#fs.readlink" title="fs.readlink(path, [callback])">fs.readlink(path, [callback])</a></li><li><a href="#fs.readlinkSync" title="fs.readlinkSync(path)">fs.readlinkSync(path)</a></li><li><a href="#fs.realpath" title="fs.realpath(path, [callback])">fs.realpath(path, [callback])</a></li><li><a href="#fs.realpathSync" title="fs.realpathSync(path)">fs.realpathSync(path)</a></li><li><a href="#fs.unlink" title="fs.unlink(path, [callback])">fs.unlink(path, [callback])</a></li><li><a href="#fs.unlinkSync" title="fs.unlinkSync(path)">fs.unlinkSync(path)</a></li><li><a href="#fs.rmdir" title="fs.rmdir(path, [callback])">fs.rmdir(path, [callback])</a></li><li><a href="#fs.rmdirSync" title="fs.rmdirSync(path)">fs.rmdirSync(path)</a></li><li><a href="#fs.mkdir" title="fs.mkdir(path, mode, [callback])">fs.mkdir(path, mode, [callback])</a></li><li><a href="#fs.mkdirSync" title="fs.mkdirSync(path, mode)">fs.mkdirSync(path, mode)</a></li><li><a href="#fs.readdir" title="fs.readdir(path, [callback])">fs.readdir(path, [callback])</a></li><li><a href="#fs.readdirSync" title="fs.readdirSync(path)">fs.readdirSync(path)</a></li><li><a href="#fs.close" title="fs.close(fd, [callback])">fs.close(fd, [callback])</a></li><li><a href="#fs.closeSync" title="fs.closeSync(fd)">fs.closeSync(fd)</a></li><li><a href="#fs.open" title="fs.open(path, flags, [mode], [callback])">fs.open(path, flags, [mode], [callback])</a></li><li><a href="#fs.openSync" title="fs.openSync(path, flags, [mode])">fs.openSync(path, flags, [mode])</a></li><li><a href="#fs.utimes" title="fs.utimes(path, atime, mtime, callback)">fs.utimes(path, atime, mtime, callback)</a></li><li><a href="#fs.utimesSync" title="fs.utimesSync(path, atime, mtime)">fs.utimesSync(path, atime, mtime)</a></li><li><a href="#fs.futimes" title="fs.futimes(path, atime, mtime, callback)">fs.futimes(path, atime, mtime, callback)</a></li><li><a href="#fs.futimesSync" title="fs.futimesSync(path, atime, mtime)">fs.futimesSync(path, atime, mtime)</a></li><li><a href="#fs.write" title="fs.write(fd, buffer, offset, length, position, [callback])">fs.write(fd, buffer, offset, length, position, [callback])</a></li><li><a href="#fs.writeSync" title="fs.writeSync(fd, buffer, offset, length, position)">fs.writeSync(fd, buffer, offset, length, position)</a></li><li><a href="#fs.writeSync" title="fs.writeSync(fd, str, position, encoding='utf8')">fs.writeSync(fd, str, position, encoding='utf8')</a></li><li><a href="#fs.read" title="fs.read(fd, buffer, offset, length, position, [callback])">fs.read(fd, buffer, offset, length, position, [callback])</a></li><li><a href="#fs.readSync" title="fs.readSync(fd, buffer, offset, length, position)">fs.readSync(fd, buffer, offset, length, position)</a></li><li><a href="#fs.readSync" title="fs.readSync(fd, length, position, encoding)">fs.readSync(fd, length, position, encoding)</a></li><li><a href="#fs.readFile" title="fs.readFile(filename, [encoding], [callback])">fs.readFile(filename, [encoding], [callback])</a></li><li><a href="#fs.readFileSync" title="fs.readFileSync(filename, [encoding])">fs.readFileSync(filename, [encoding])</a></li><li><a href="#fs.writeFile" title="fs.writeFile(filename, data, encoding='utf8', [callback])">fs.writeFile(filename, data, encoding='utf8', [callback])</a></li><li><a href="#fs.writeFileSync" title="fs.writeFileSync(filename, data, encoding='utf8')">fs.writeFileSync(filename, data, encoding='utf8')</a></li><li><a href="#fs.watchFile" title="fs.watchFile(filename, [options], listener)">fs.watchFile(filename, [options], listener)</a></li><li><a href="#fs.unwatchFile" title="fs.unwatchFile(filename)">fs.unwatchFile(filename)</a></li></ul></li><li><a href="#fs.Stats" title="fs.Stats">fs.Stats</a></li><li><a href="#fs.ReadStream" title="fs.ReadStream">fs.ReadStream</a><ul><li><a href="#fs.createReadStream" title="fs.createReadStream(path, [options])">fs.createReadStream(path, [options])</a></li></ul></li><li><a href="#fs.WriteStream" title="fs.WriteStream">fs.WriteStream</a><ul><li><a href="#event_open_" title="Event: 'open'">Event: 'open'</a></li><li><a href="#fs.createWriteStream" title="fs.createWriteStream(path, [options])">fs.createWriteStream(path, [options])</a></li></ul></li><li><a href="#path" title="Path">Path</a><ul><li><a href="#path.normalize" title="path.normalize(p)">path.normalize(p)</a></li><li><a href="#path.join" title="path.join([path1], [path2], [...])">path.join([path1], [path2], [...])</a></li><li><a href="#path.resolve" title="path.resolve([from ...], to)">path.resolve([from ...], to)</a></li><li><a href="#path.dirname" title="path.dirname(p)">path.dirname(p)</a></li><li><a href="#path.basename" title="path.basename(p, [ext])">path.basename(p, [ext])</a></li><li><a href="#path.extname" title="path.extname(p)">path.extname(p)</a></li><li><a href="#path.exists" title="path.exists(p, [callback])">path.exists(p, [callback])</a></li><li><a href="#path.existsSync" title="path.existsSync(p)">path.existsSync(p)</a></li></ul></li><li><a href="#net" title="net">net</a><ul><li><a href="#net.createServer" title="net.createServer([options], [connectionListener])">net.createServer([options], [connectionListener])</a></li><li><a href="#net.createConnection" title="net.createConnection(arguments...)">net.createConnection(arguments...)</a></li><li><a href="#net.Server" title="net.Server">net.Server</a><ul><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.listenFD" title="server.listenFD(fd)">server.listenFD(fd)</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.address" title="server.address()">server.address()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.Socket" title="net.Socket">net.Socket</a><ul><li><a href="#new_net.Socket" title="new net.Socket([options])">new net.Socket([options])</a></li><li><a href="#socket.connect" title="socket.connect(port, [host], [callback])">socket.connect(port, [host], [callback])</a></li><li><a href="#socket.connect" title="socket.connect(path, [callback])">socket.connect(path, [callback])</a></li><li><a href="#socket.bufferSize" title="socket.bufferSize">socket.bufferSize</a></li><li><a href="#socket.setEncoding" title="socket.setEncoding(encoding=null)">socket.setEncoding(encoding=null)</a></li><li><a href="#socket.setSecure" title="socket.setSecure()">socket.setSecure()</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [callback])">socket.write(data, [encoding], [callback])</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [fileDescriptor], [callback])">socket.write(data, [encoding], [fileDescriptor], [callback])</a></li><li><a href="#socket.end" title="socket.end([data], [encoding])">socket.end([data], [encoding])</a></li><li><a href="#socket.destroy" title="socket.destroy()">socket.destroy()</a></li><li><a href="#socket.pause" title="socket.pause()">socket.pause()</a></li><li><a href="#socket.resume" title="socket.resume()">socket.resume()</a></li><li><a href="#socket.setTimeout" title="socket.setTimeout(timeout, [callback])">socket.setTimeout(timeout, [callback])</a></li><li><a href="#socket.setNoDelay" title="socket.setNoDelay(noDelay=true)">socket.setNoDelay(noDelay=true)</a></li><li><a href="#socket.setKeepAlive" title="socket.setKeepAlive(enable=false, [initialDelay])">socket.setKeepAlive(enable=false, [initialDelay])</a></li><li><a href="#socket.remoteAddress" title="socket.remoteAddress">socket.remoteAddress</a></li><li><a href="#event_connect_" title="Event: 'connect'">Event: 'connect'</a></li><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_timeout_" title="Event: 'timeout'">Event: 'timeout'</a></li><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.isIP" title="net.isIP">net.isIP</a><ul><li><a href="#net.isIP" title="net.isIP(input)">net.isIP(input)</a></li><li><a href="#net.isIPv4" title="net.isIPv4(input)">net.isIPv4(input)</a></li><li><a href="#net.isIPv6" title="net.isIPv6(input)">net.isIPv6(input)</a></li></ul></li></ul></li><li><a href="#dNS" title="DNS">DNS</a><ul><li><a href="#dns.lookup" title="dns.lookup(domain, family=null, callback)">dns.lookup(domain, family=null, callback)</a></li><li><a href="#dns.resolve" title="dns.resolve(domain, rrtype='A', callback)">dns.resolve(domain, rrtype='A', callback)</a></li><li><a href="#dns.resolve4" title="dns.resolve4(domain, callback)">dns.resolve4(domain, callback)</a></li><li><a href="#dns.resolve6" title="dns.resolve6(domain, callback)">dns.resolve6(domain, callback)</a></li><li><a href="#dns.resolveMx" title="dns.resolveMx(domain, callback)">dns.resolveMx(domain, callback)</a></li><li><a href="#dns.resolveTxt" title="dns.resolveTxt(domain, callback)">dns.resolveTxt(domain, callback)</a></li><li><a href="#dns.resolveSrv" title="dns.resolveSrv(domain, callback)">dns.resolveSrv(domain, callback)</a></li><li><a href="#dns.reverse" title="dns.reverse(ip, callback)">dns.reverse(ip, callback)</a></li></ul></li><li><a href="#uDP_Datagram_Sockets" title="UDP / Datagram Sockets">UDP / Datagram Sockets</a><ul><li><a href="#event_message_" title="Event: 'message'">Event: 'message'</a></li><li><a href="#event_listening_" title="Event: 'listening'">Event: 'listening'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#dgram.createSocket" title="dgram.createSocket(type, [callback])">dgram.createSocket(type, [callback])</a></li><li><a href="#dgram.send" title="dgram.send(buf, offset, length, path, [callback])">dgram.send(buf, offset, length, path, [callback])</a></li><li><a href="#dgram.send" title="dgram.send(buf, offset, length, port, address, [callback])">dgram.send(buf, offset, length, port, address, [callback])</a></li><li><a href="#dgram.bind" title="dgram.bind(path)">dgram.bind(path)</a></li><li><a href="#dgram.bind" title="dgram.bind(port, [address])">dgram.bind(port, [address])</a></li><li><a href="#dgram.close" title="dgram.close()">dgram.close()</a></li><li><a href="#dgram.address" title="dgram.address()">dgram.address()</a></li><li><a href="#dgram.setBroadcast" title="dgram.setBroadcast(flag)">dgram.setBroadcast(flag)</a></li><li><a href="#dgram.setTTL" title="dgram.setTTL(ttl)">dgram.setTTL(ttl)</a></li><li><a href="#dgram.setMulticastTTL" title="dgram.setMulticastTTL(ttl)">dgram.setMulticastTTL(ttl)</a></li><li><a href="#dgram.setMulticastLoopback" title="dgram.setMulticastLoopback(flag)">dgram.setMulticastLoopback(flag)</a></li><li><a href="#dgram.addMembership" title="dgram.addMembership(multicastAddress, [multicastInterface])">dgram.addMembership(multicastAddress, [multicastInterface])</a></li><li><a href="#dgram.dropMembership" title="dgram.dropMembership(multicastAddress, [multicastInterface])">dgram.dropMembership(multicastAddress, [multicastInterface])</a></li></ul></li><li><a href="#hTTP" title="HTTP">HTTP</a></li><li><a href="#http.Server" title="http.Server">http.Server</a><ul><li><a href="#event_request_" title="Event: 'request'">Event: 'request'</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_request_" title="Event: 'request'">Event: 'request'</a></li><li><a href="#event_checkContinue_" title="Event: 'checkContinue'">Event: 'checkContinue'</a></li><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_clientError_" title="Event: 'clientError'">Event: 'clientError'</a></li><li><a href="#http.createServer" title="http.createServer(requestListener)">http.createServer(requestListener)</a></li><li><a href="#server.listen" title="server.listen(port, [hostname], [callback])">server.listen(port, [hostname], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li></ul></li><li><a href="#http.ServerRequest" title="http.ServerRequest">http.ServerRequest</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#request.method" title="request.method">request.method</a></li><li><a href="#request.url" title="request.url">request.url</a></li><li><a href="#request.headers" title="request.headers">request.headers</a></li><li><a href="#request.trailers" title="request.trailers">request.trailers</a></li><li><a href="#request.httpVersion" title="request.httpVersion">request.httpVersion</a></li><li><a href="#request.setEncoding" title="request.setEncoding(encoding=null)">request.setEncoding(encoding=null)</a></li><li><a href="#request.pause" title="request.pause()">request.pause()</a></li><li><a href="#request.resume" title="request.resume()">request.resume()</a></li><li><a href="#request.connection" title="request.connection">request.connection</a></li></ul></li><li><a href="#http.ServerResponse" title="http.ServerResponse">http.ServerResponse</a><ul><li><a href="#response.writeContinue" title="response.writeContinue()">response.writeContinue()</a></li><li><a href="#response.writeHead" title="response.writeHead(statusCode, [reasonPhrase], [headers])">response.writeHead(statusCode, [reasonPhrase], [headers])</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.setHeader" title="response.setHeader(name, value)">response.setHeader(name, value)</a></li><li><a href="#response.getHeader" title="response.getHeader(name)">response.getHeader(name)</a></li><li><a href="#response.removeHeader" title="response.removeHeader(name)">response.removeHeader(name)</a></li><li><a href="#response.write" title="response.write(chunk, encoding='utf8')">response.write(chunk, encoding='utf8')</a></li><li><a href="#response.addTrailers" title="response.addTrailers(headers)">response.addTrailers(headers)</a></li><li><a href="#response.end" title="response.end([data], [encoding])">response.end([data], [encoding])</a></li></ul></li><li><a href="#http.request" title="http.request(options, callback)">http.request(options, callback)</a></li><li><a href="#http.get" title="http.get(options, callback)">http.get(options, callback)</a></li><li><a href="#http.Agent" title="http.Agent">http.Agent</a></li><li><a href="#http.getAgent" title="http.getAgent(host, port)">http.getAgent(host, port)</a><ul><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_continue_" title="Event: 'continue'">Event: 'continue'</a></li><li><a href="#agent.maxSockets" title="agent.maxSockets">agent.maxSockets</a></li><li><a href="#agent.sockets" title="agent.sockets">agent.sockets</a></li><li><a href="#agent.queue" title="agent.queue">agent.queue</a></li></ul></li><li><a href="#http.ClientRequest" title="http.ClientRequest">http.ClientRequest</a><ul><li><a href="#event_response_" title="Event 'response'">Event 'response'</a></li><li><a href="#request.write" title="request.write(chunk, encoding='utf8')">request.write(chunk, encoding='utf8')</a></li><li><a href="#request.end" title="request.end([data], [encoding])">request.end([data], [encoding])</a></li><li><a href="#request.abort" title="request.abort()">request.abort()</a></li></ul></li><li><a href="#http.ClientResponse" title="http.ClientResponse">http.ClientResponse</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.httpVersion" title="response.httpVersion">response.httpVersion</a></li><li><a href="#response.headers" title="response.headers">response.headers</a></li><li><a href="#response.trailers" title="response.trailers">response.trailers</a></li><li><a href="#response.setEncoding" title="response.setEncoding(encoding=null)">response.setEncoding(encoding=null)</a></li><li><a href="#response.pause" title="response.pause()">response.pause()</a></li><li><a href="#response.resume" title="response.resume()">response.resume()</a></li></ul></li><li><a href="#hTTPS" title="HTTPS">HTTPS</a></li><li><a href="#https.Server" title="https.Server">https.Server</a></li><li><a href="#https.createServer" title="https.createServer">https.createServer</a></li><li><a href="#https.request" title="https.request(options, callback)">https.request(options, callback)</a></li><li><a href="#https.get" title="https.get(options, callback)">https.get(options, callback)</a></li><li><a href="#uRL" title="URL">URL</a><ul><li><a href="#url.parse" title="url.parse(urlStr, parseQueryString=false)">url.parse(urlStr, parseQueryString=false)</a></li><li><a href="#url.format" title="url.format(urlObj)">url.format(urlObj)</a></li><li><a href="#url.resolve" title="url.resolve(from, to)">url.resolve(from, to)</a></li></ul></li><li><a href="#query_String" title="Query String">Query String</a><ul><li><a href="#querystring.stringify" title="querystring.stringify(obj, sep='&', eq='=')">querystring.stringify(obj, sep='&', eq='=')</a></li><li><a href="#querystring.parse" title="querystring.parse(str, sep='&', eq='=')">querystring.parse(str, sep='&', eq='=')</a></li><li><a href="#querystring.escape" title="querystring.escape">querystring.escape</a></li><li><a href="#querystring.unescape" title="querystring.unescape">querystring.unescape</a></li></ul></li><li><a href="#rEPL" title="REPL">REPL</a><ul><li><a href="#repl.start" title="repl.start(prompt='> ', stream=process.stdin)">repl.start(prompt='> ', stream=process.stdin)</a></li><li><a href="#rEPL_Features" title="REPL Features">REPL Features</a></li></ul></li><li><a href="#child_Processes" title="Child Processes">Child Processes</a><ul><li><a href="#event_exit_" title="Event:  'exit'">Event:  'exit'</a></li><li><a href="#child.stdin" title="child.stdin">child.stdin</a></li><li><a href="#child.stdout" title="child.stdout">child.stdout</a></li><li><a href="#child.stderr" title="child.stderr">child.stderr</a></li><li><a href="#child.pid" title="child.pid">child.pid</a></li><li><a href="#child_process.spawn" title="child_process.spawn(command, args=[], [options])">child_process.spawn(command, args=[], [options])</a></li><li><a href="#child_process.exec" title="child_process.exec(command, [options], callback)">child_process.exec(command, [options], callback)</a></li><li><a href="#child.kill" title="child.kill(signal='SIGTERM')">child.kill(signal='SIGTERM')</a></li></ul></li><li><a href="#assert" title="Assert">Assert</a><ul><li><a href="#assert.fail" title="assert.fail(actual, expected, message, operator)">assert.fail(actual, expected, message, operator)</a></li><li><a href="#assert.ok" title="assert.ok(value, [message])">assert.ok(value, [message])</a></li><li><a href="#assert.equal" title="assert.equal(actual, expected, [message])">assert.equal(actual, expected, [message])</a></li><li><a href="#assert.notEqual" title="assert.notEqual(actual, expected, [message])">assert.notEqual(actual, expected, [message])</a></li><li><a href="#assert.deepEqual" title="assert.deepEqual(actual, expected, [message])">assert.deepEqual(actual, expected, [message])</a></li><li><a href="#assert.notDeepEqual" title="assert.notDeepEqual(actual, expected, [message])">assert.notDeepEqual(actual, expected, [message])</a></li><li><a href="#assert.strictEqual" title="assert.strictEqual(actual, expected, [message])">assert.strictEqual(actual, expected, [message])</a></li><li><a href="#assert.notStrictEqual" title="assert.notStrictEqual(actual, expected, [message])">assert.notStrictEqual(actual, expected, [message])</a></li><li><a href="#assert.throws" title="assert.throws(block, [error], [message])">assert.throws(block, [error], [message])</a></li><li><a href="#assert.doesNotThrow" title="assert.doesNotThrow(block, [error], [message])">assert.doesNotThrow(block, [error], [message])</a></li><li><a href="#assert.ifError" title="assert.ifError(value)">assert.ifError(value)</a></li></ul></li><li><a href="#tTY" title="TTY">TTY</a><ul><li><a href="#tty.open" title="tty.open(path, args=[])">tty.open(path, args=[])</a></li><li><a href="#tty.isatty" title="tty.isatty(fd)">tty.isatty(fd)</a></li><li><a href="#tty.setRawMode" title="tty.setRawMode(mode)">tty.setRawMode(mode)</a></li><li><a href="#tty.setWindowSize" title="tty.setWindowSize(fd, row, col)">tty.setWindowSize(fd, row, col)</a></li><li><a href="#tty.getWindowSize" title="tty.getWindowSize(fd)">tty.getWindowSize(fd)</a></li></ul></li><li><a href="#os_Module" title="os Module">os Module</a><ul><li><a href="#os.hostname" title="os.hostname()">os.hostname()</a></li><li><a href="#os.type" title="os.type()">os.type()</a></li><li><a href="#os.release" title="os.release()">os.release()</a></li><li><a href="#os.uptime" title="os.uptime()">os.uptime()</a></li><li><a href="#os.loadavg" title="os.loadavg()">os.loadavg()</a></li><li><a href="#os.totalmem" title="os.totalmem()">os.totalmem()</a></li><li><a href="#os.freemem" title="os.freemem()">os.freemem()</a></li><li><a href="#os.cpus" title="os.cpus()">os.cpus()</a></li><li><a href="#os.getNetworkInterfaces" title="os.getNetworkInterfaces()">os.getNetworkInterfaces()</a></li></ul></li><li><a href="#debugger" title="Debugger">Debugger</a><ul><li><a href="#advanced_Usage" title="Advanced Usage">Advanced Usage</a></li></ul></li></ul></li><li><a href="#appendixes" title="Appendixes">Appendixes</a><ul><li><a href="#appendix_1_Third_Party_Modules" title="Appendix 1 - Third Party Modules">Appendix 1 - Third Party Modules</a></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#synopsis" title="Synopsis">Synopsis</a></li><li><a href="#global_Objects" title="Global Objects">Global Objects</a><ul><li><a href="#global" title="global">global</a></li><li><a href="#process" title="process">process</a></li><li><a href="#console" title="console">console</a></li><li><a href="#require" title="require()">require()</a></li><li><a href="#require.resolve" title="require.resolve()">require.resolve()</a></li><li><a href="#require.paths" title="require.paths">require.paths</a></li><li><a href="#__filename" title="__filename">__filename</a></li><li><a href="#__dirname" title="__dirname">__dirname</a></li><li><a href="#module" title="module">module</a></li><li><a href="#setTimeout" title="setTimeout(cb, ms)">setTimeout(cb, ms)</a></li><li><a href="#clearTimeout" title="clearTimeout(t)">clearTimeout(t)</a></li><li><a href="#setInterval" title="setInterval(cb, ms)">setInterval(cb, ms)</a></li><li><a href="#clearInterval" title="clearInterval(t)">clearInterval(t)</a></li></ul></li><li><a href="#console" title="console">console</a><ul><li><a href="#console.log" title="console.log()">console.log()</a></li><li><a href="#console.info" title="console.info()">console.info()</a></li><li><a href="#console.warn" title="console.warn()">console.warn()</a></li><li><a href="#console.error" title="console.error()">console.error()</a></li><li><a href="#console.dir" title="console.dir(obj)">console.dir(obj)</a></li><li><a href="#console.time" title="console.time(label)">console.time(label)</a></li><li><a href="#console.timeEnd" title="console.timeEnd(label)">console.timeEnd(label)</a></li><li><a href="#console.trace" title="console.trace()">console.trace()</a></li><li><a href="#console.assert" title="console.assert()">console.assert()</a></li></ul></li><li><a href="#timers" title="Timers">Timers</a><ul><li><a href="#setTimeout" title="setTimeout(callback, delay, [arg], [...])">setTimeout(callback, delay, [arg], [...])</a></li><li><a href="#clearTimeout" title="clearTimeout(timeoutId)">clearTimeout(timeoutId)</a></li><li><a href="#setInterval" title="setInterval(callback, delay, [arg], [...])">setInterval(callback, delay, [arg], [...])</a></li><li><a href="#clearInterval" title="clearInterval(intervalId)">clearInterval(intervalId)</a></li></ul></li><li><a href="#modules" title="Modules">Modules</a><ul><li><a href="#core_Modules" title="Core Modules">Core Modules</a></li><li><a href="#file_Modules" title="File Modules">File Modules</a></li><li><a href="#loading_from_node_modules_Folders" title="Loading from `node_modules` Folders">Loading from `node_modules` Folders</a><ul><li><a href="#optimizations_to_the_node_modules_Lookup_Process" title="Optimizations to the `node_modules` Lookup Process">Optimizations to the `node_modules` Lookup Process</a></li></ul></li><li><a href="#folders_as_Modules" title="Folders as Modules">Folders as Modules</a></li><li><a href="#caching" title="Caching">Caching</a></li><li><a href="#module.exports" title="module.exports">module.exports</a></li><li><a href="#all_Together..." title="All Together...">All Together...</a></li><li><a href="#loading_from_the_require.paths_Folders" title="Loading from the `require.paths` Folders">Loading from the `require.paths` Folders</a><ul><li><a href="#note_Please_Avoid_Modifying_require.paths_" title="Note:** Please Avoid Modifying `require.paths`">Note:** Please Avoid Modifying `require.paths`</a><ul><li><a href="#setting_require.paths_to_some_other_value_does_nothing." title="Setting `require.paths` to some other value does nothing.">Setting `require.paths` to some other value does nothing.</a></li><li><a href="#putting_relative_paths_in_require.paths_is..._weird." title="Putting relative paths in `require.paths` is... weird.">Putting relative paths in `require.paths` is... weird.</a></li><li><a href="#zero_Isolation" title="Zero Isolation">Zero Isolation</a></li></ul></li></ul></li></ul></li><li><a href="#addenda_Package_Manager_Tips" title="Addenda: Package Manager Tips">Addenda: Package Manager Tips</a></li><li><a href="#addons" title="Addons">Addons</a></li><li><a href="#process" title="process">process</a><ul><li><a href="#event_exit_" title="Event: 'exit'">Event: 'exit'</a></li><li><a href="#event_uncaughtException_" title="Event: 'uncaughtException'">Event: 'uncaughtException'</a></li><li><a href="#signal_Events" title="Signal Events">Signal Events</a></li><li><a href="#process.stdout" title="process.stdout">process.stdout</a></li><li><a href="#process.stderr" title="process.stderr">process.stderr</a></li><li><a href="#process.stdin" title="process.stdin">process.stdin</a></li><li><a href="#process.argv" title="process.argv">process.argv</a></li><li><a href="#process.execPath" title="process.execPath">process.execPath</a></li><li><a href="#process.chdir" title="process.chdir(directory)">process.chdir(directory)</a></li><li><a href="#process.cwd" title="process.cwd()">process.cwd()</a></li><li><a href="#process.env" title="process.env">process.env</a></li><li><a href="#process.exit" title="process.exit(code=0)">process.exit(code=0)</a></li><li><a href="#process.getgid" title="process.getgid()">process.getgid()</a></li><li><a href="#process.setgid" title="process.setgid(id)">process.setgid(id)</a></li><li><a href="#process.getuid" title="process.getuid()">process.getuid()</a></li><li><a href="#process.setuid" title="process.setuid(id)">process.setuid(id)</a></li><li><a href="#process.version" title="process.version">process.version</a></li><li><a href="#process.installPrefix" title="process.installPrefix">process.installPrefix</a></li><li><a href="#process.kill" title="process.kill(pid, signal='SIGTERM')">process.kill(pid, signal='SIGTERM')</a></li><li><a href="#process.pid" title="process.pid">process.pid</a></li><li><a href="#process.title" title="process.title">process.title</a></li><li><a href="#process.platform" title="process.platform">process.platform</a></li><li><a href="#process.memoryUsage" title="process.memoryUsage()">process.memoryUsage()</a></li><li><a href="#process.nextTick" title="process.nextTick(callback)">process.nextTick(callback)</a></li><li><a href="#process.umask" title="process.umask([mask])">process.umask([mask])</a></li></ul></li><li><a href="#util" title="util">util</a><ul><li><a href="#util.debug" title="util.debug(string)">util.debug(string)</a></li><li><a href="#util.log" title="util.log(string)">util.log(string)</a></li><li><a href="#util.inspect" title="util.inspect(object, showHidden=false, depth=2)">util.inspect(object, showHidden=false, depth=2)</a></li><li><a href="#util.pump" title="util.pump(readableStream, writableStream, [callback])">util.pump(readableStream, writableStream, [callback])</a></li><li><a href="#util.inherits" title="util.inherits(constructor, superConstructor)">util.inherits(constructor, superConstructor)</a></li></ul></li><li><a href="#events" title="Events">Events</a><ul><li><a href="#events.EventEmitter" title="events.EventEmitter">events.EventEmitter</a><ul><li><a href="#emitter.addListener" title="emitter.addListener(event, listener)">emitter.addListener(event, listener)</a></li><li><a href="#emitter.on" title="emitter.on(event, listener)">emitter.on(event, listener)</a></li><li><a href="#emitter.once" title="emitter.once(event, listener)">emitter.once(event, listener)</a></li><li><a href="#emitter.removeListener" title="emitter.removeListener(event, listener)">emitter.removeListener(event, listener)</a></li><li><a href="#emitter.removeAllListeners" title="emitter.removeAllListeners(event)">emitter.removeAllListeners(event)</a></li><li><a href="#emitter.setMaxListeners" title="emitter.setMaxListeners(n)">emitter.setMaxListeners(n)</a></li><li><a href="#emitter.listeners" title="emitter.listeners(event)">emitter.listeners(event)</a></li><li><a href="#emitter.emit" title="emitter.emit(event, [arg1], [arg2], [...])">emitter.emit(event, [arg1], [arg2], [...])</a></li><li><a href="#event_newListener_" title="Event: 'newListener'">Event: 'newListener'</a></li></ul></li></ul></li><li><a href="#buffers" title="Buffers">Buffers</a><ul><li><a href="#new_Buffer" title="new Buffer(size)">new Buffer(size)</a></li><li><a href="#new_Buffer" title="new Buffer(array)">new Buffer(array)</a></li><li><a href="#new_Buffer" title="new Buffer(str, encoding='utf8')">new Buffer(str, encoding='utf8')</a></li><li><a href="#buffer.write" title="buffer.write(string, offset=0, encoding='utf8')">buffer.write(string, offset=0, encoding='utf8')</a></li><li><a href="#buffer.toString" title="buffer.toString(encoding, start=0, end=buffer.length)">buffer.toString(encoding, start=0, end=buffer.length)</a></li><li><a href="#buffer_index_" title="buffer[index]">buffer[index]</a></li><li><a href="#buffer.isBuffer" title="Buffer.isBuffer(obj)">Buffer.isBuffer(obj)</a></li><li><a href="#buffer.byteLength" title="Buffer.byteLength(string, encoding='utf8')">Buffer.byteLength(string, encoding='utf8')</a></li><li><a href="#buffer.length" title="buffer.length">buffer.length</a></li><li><a href="#buffer.copy" title="buffer.copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)">buffer.copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)</a></li><li><a href="#buffer.slice" title="buffer.slice(start, end=buffer.length)">buffer.slice(start, end=buffer.length)</a></li></ul></li><li><a href="#streams" title="Streams">Streams</a></li><li><a href="#readable_Stream" title="Readable Stream">Readable Stream</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_fd_" title="Event: 'fd'">Event: 'fd'</a></li><li><a href="#stream.readable" title="stream.readable">stream.readable</a></li><li><a href="#stream.setEncoding" title="stream.setEncoding(encoding)">stream.setEncoding(encoding)</a></li><li><a href="#stream.pause" title="stream.pause()">stream.pause()</a></li><li><a href="#stream.resume" title="stream.resume()">stream.resume()</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li><li><a href="#stream.destroySoon" title="stream.destroySoon()">stream.destroySoon()</a></li><li><a href="#stream.pipe" title="stream.pipe(destination, [options])">stream.pipe(destination, [options])</a></li></ul></li><li><a href="#writable_Stream" title="Writable Stream">Writable Stream</a><ul><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_pipe_" title="Event: 'pipe'">Event: 'pipe'</a></li><li><a href="#stream.writable" title="stream.writable">stream.writable</a></li><li><a href="#stream.write" title="stream.write(string, encoding='utf8', [fd])">stream.write(string, encoding='utf8', [fd])</a></li><li><a href="#stream.write" title="stream.write(buffer)">stream.write(buffer)</a></li><li><a href="#stream.end" title="stream.end()">stream.end()</a></li><li><a href="#stream.end" title="stream.end(string, encoding)">stream.end(string, encoding)</a></li><li><a href="#stream.end" title="stream.end(buffer)">stream.end(buffer)</a></li><li><a href="#stream.destroy" title="stream.destroy()">stream.destroy()</a></li><li><a href="#stream.destroySoon" title="stream.destroySoon()">stream.destroySoon()</a></li></ul></li><li><a href="#crypto" title="Crypto">Crypto</a><ul><li><a href="#crypto.createCredentials" title="crypto.createCredentials(details)">crypto.createCredentials(details)</a></li><li><a href="#crypto.createHash" title="crypto.createHash(algorithm)">crypto.createHash(algorithm)</a></li><li><a href="#hash.update" title="hash.update(data)">hash.update(data)</a></li><li><a href="#hash.digest" title="hash.digest(encoding='binary')">hash.digest(encoding='binary')</a></li><li><a href="#crypto.createHmac" title="crypto.createHmac(algorithm, key)">crypto.createHmac(algorithm, key)</a></li><li><a href="#hmac.update" title="hmac.update(data)">hmac.update(data)</a></li><li><a href="#hmac.digest" title="hmac.digest(encoding='binary')">hmac.digest(encoding='binary')</a></li><li><a href="#crypto.createCipher" title="crypto.createCipher(algorithm, key)">crypto.createCipher(algorithm, key)</a></li><li><a href="#cipher.update" title="cipher.update(data, input_encoding='binary', output_encoding='binary')">cipher.update(data, input_encoding='binary', output_encoding='binary')</a></li><li><a href="#cipher.final" title="cipher.final(output_encoding='binary')">cipher.final(output_encoding='binary')</a></li><li><a href="#crypto.createDecipher" title="crypto.createDecipher(algorithm, key)">crypto.createDecipher(algorithm, key)</a></li><li><a href="#decipher.update" title="decipher.update(data, input_encoding='binary', output_encoding='binary')">decipher.update(data, input_encoding='binary', output_encoding='binary')</a></li><li><a href="#decipher.final" title="decipher.final(output_encoding='binary')">decipher.final(output_encoding='binary')</a></li><li><a href="#crypto.createSign" title="crypto.createSign(algorithm)">crypto.createSign(algorithm)</a></li><li><a href="#signer.update" title="signer.update(data)">signer.update(data)</a></li><li><a href="#signer.sign" title="signer.sign(private_key, output_format='binary')">signer.sign(private_key, output_format='binary')</a></li><li><a href="#crypto.createVerify" title="crypto.createVerify(algorithm)">crypto.createVerify(algorithm)</a></li><li><a href="#verifier.update" title="verifier.update(data)">verifier.update(data)</a></li><li><a href="#verifier.verify" title="verifier.verify(cert, signature, signature_format='binary')">verifier.verify(cert, signature, signature_format='binary')</a></li></ul></li><li><a href="#tLS_" title="TLS (SSL)">TLS (SSL)</a><ul><li><a href="#s_tls.connect" title="s = tls.connect(port, [host], [options], callback)">s = tls.connect(port, [host], [options], callback)</a></li><li><a href="#sTARTTLS" title="STARTTLS">STARTTLS</a></li><li><a href="#tls.Server" title="tls.Server">tls.Server</a><ul><li><a href="#tls.createServer" title="tls.createServer(options, secureConnectionListener)">tls.createServer(options, secureConnectionListener)</a></li><li><a href="#event_secureConnection_" title="Event: 'secureConnection'">Event: 'secureConnection'</a></li><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li></ul></li></ul></li><li><a href="#file_System" title="File System">File System</a><ul><li><a href="#fs.rename" title="fs.rename(path1, path2, [callback])">fs.rename(path1, path2, [callback])</a></li><li><a href="#fs.renameSync" title="fs.renameSync(path1, path2)">fs.renameSync(path1, path2)</a></li><li><a href="#fs.truncate" title="fs.truncate(fd, len, [callback])">fs.truncate(fd, len, [callback])</a></li><li><a href="#fs.truncateSync" title="fs.truncateSync(fd, len)">fs.truncateSync(fd, len)</a></li><li><a href="#fs.chmod" title="fs.chmod(path, mode, [callback])">fs.chmod(path, mode, [callback])</a></li><li><a href="#fs.chmodSync" title="fs.chmodSync(path, mode)">fs.chmodSync(path, mode)</a></li><li><a href="#fs.stat" title="fs.stat(path, [callback])">fs.stat(path, [callback])</a></li><li><a href="#fs.lstat" title="fs.lstat(path, [callback])">fs.lstat(path, [callback])</a></li><li><a href="#fs.fstat" title="fs.fstat(fd, [callback])">fs.fstat(fd, [callback])</a></li><li><a href="#fs.statSync" title="fs.statSync(path)">fs.statSync(path)</a></li><li><a href="#fs.lstatSync" title="fs.lstatSync(path)">fs.lstatSync(path)</a></li><li><a href="#fs.fstatSync" title="fs.fstatSync(fd)">fs.fstatSync(fd)</a></li><li><a href="#fs.link" title="fs.link(srcpath, dstpath, [callback])">fs.link(srcpath, dstpath, [callback])</a></li><li><a href="#fs.linkSync" title="fs.linkSync(srcpath, dstpath)">fs.linkSync(srcpath, dstpath)</a></li><li><a href="#fs.symlink" title="fs.symlink(linkdata, path, [callback])">fs.symlink(linkdata, path, [callback])</a></li><li><a href="#fs.symlinkSync" title="fs.symlinkSync(linkdata, path)">fs.symlinkSync(linkdata, path)</a></li><li><a href="#fs.readlink" title="fs.readlink(path, [callback])">fs.readlink(path, [callback])</a></li><li><a href="#fs.readlinkSync" title="fs.readlinkSync(path)">fs.readlinkSync(path)</a></li><li><a href="#fs.realpath" title="fs.realpath(path, [callback])">fs.realpath(path, [callback])</a></li><li><a href="#fs.realpathSync" title="fs.realpathSync(path)">fs.realpathSync(path)</a></li><li><a href="#fs.unlink" title="fs.unlink(path, [callback])">fs.unlink(path, [callback])</a></li><li><a href="#fs.unlinkSync" title="fs.unlinkSync(path)">fs.unlinkSync(path)</a></li><li><a href="#fs.rmdir" title="fs.rmdir(path, [callback])">fs.rmdir(path, [callback])</a></li><li><a href="#fs.rmdirSync" title="fs.rmdirSync(path)">fs.rmdirSync(path)</a></li><li><a href="#fs.mkdir" title="fs.mkdir(path, mode, [callback])">fs.mkdir(path, mode, [callback])</a></li><li><a href="#fs.mkdirSync" title="fs.mkdirSync(path, mode)">fs.mkdirSync(path, mode)</a></li><li><a href="#fs.readdir" title="fs.readdir(path, [callback])">fs.readdir(path, [callback])</a></li><li><a href="#fs.readdirSync" title="fs.readdirSync(path)">fs.readdirSync(path)</a></li><li><a href="#fs.close" title="fs.close(fd, [callback])">fs.close(fd, [callback])</a></li><li><a href="#fs.closeSync" title="fs.closeSync(fd)">fs.closeSync(fd)</a></li><li><a href="#fs.open" title="fs.open(path, flags, [mode], [callback])">fs.open(path, flags, [mode], [callback])</a></li><li><a href="#fs.openSync" title="fs.openSync(path, flags, [mode])">fs.openSync(path, flags, [mode])</a></li><li><a href="#fs.write" title="fs.write(fd, buffer, offset, length, position, [callback])">fs.write(fd, buffer, offset, length, position, [callback])</a></li><li><a href="#fs.writeSync" title="fs.writeSync(fd, buffer, offset, length, position)">fs.writeSync(fd, buffer, offset, length, position)</a></li><li><a href="#fs.writeSync" title="fs.writeSync(fd, str, position, encoding='utf8')">fs.writeSync(fd, str, position, encoding='utf8')</a></li><li><a href="#fs.read" title="fs.read(fd, buffer, offset, length, position, [callback])">fs.read(fd, buffer, offset, length, position, [callback])</a></li><li><a href="#fs.readSync" title="fs.readSync(fd, buffer, offset, length, position)">fs.readSync(fd, buffer, offset, length, position)</a></li><li><a href="#fs.readSync" title="fs.readSync(fd, length, position, encoding)">fs.readSync(fd, length, position, encoding)</a></li><li><a href="#fs.readFile" title="fs.readFile(filename, [encoding], [callback])">fs.readFile(filename, [encoding], [callback])</a></li><li><a href="#fs.readFileSync" title="fs.readFileSync(filename, [encoding])">fs.readFileSync(filename, [encoding])</a></li><li><a href="#fs.writeFile" title="fs.writeFile(filename, data, encoding='utf8', [callback])">fs.writeFile(filename, data, encoding='utf8', [callback])</a></li><li><a href="#fs.writeFileSync" title="fs.writeFileSync(filename, data, encoding='utf8')">fs.writeFileSync(filename, data, encoding='utf8')</a></li><li><a href="#fs.watchFile" title="fs.watchFile(filename, [options], listener)">fs.watchFile(filename, [options], listener)</a></li><li><a href="#fs.unwatchFile" title="fs.unwatchFile(filename)">fs.unwatchFile(filename)</a></li></ul></li><li><a href="#fs.Stats" title="fs.Stats">fs.Stats</a></li><li><a href="#fs.ReadStream" title="fs.ReadStream">fs.ReadStream</a><ul><li><a href="#fs.createReadStream" title="fs.createReadStream(path, [options])">fs.createReadStream(path, [options])</a></li></ul></li><li><a href="#fs.WriteStream" title="fs.WriteStream">fs.WriteStream</a><ul><li><a href="#event_open_" title="Event: 'open'">Event: 'open'</a></li><li><a href="#fs.createWriteStream" title="fs.createWriteStream(path, [options])">fs.createWriteStream(path, [options])</a></li></ul></li><li><a href="#path" title="Path">Path</a><ul><li><a href="#path.normalize" title="path.normalize(p)">path.normalize(p)</a></li><li><a href="#path.join" title="path.join([path1], [path2], [...])">path.join([path1], [path2], [...])</a></li><li><a href="#path.resolve" title="path.resolve([from ...], to)">path.resolve([from ...], to)</a></li><li><a href="#path.dirname" title="path.dirname(p)">path.dirname(p)</a></li><li><a href="#path.basename" title="path.basename(p, [ext])">path.basename(p, [ext])</a></li><li><a href="#path.extname" title="path.extname(p)">path.extname(p)</a></li><li><a href="#path.exists" title="path.exists(p, [callback])">path.exists(p, [callback])</a></li><li><a href="#path.existsSync" title="path.existsSync(p)">path.existsSync(p)</a></li></ul></li><li><a href="#net" title="net">net</a><ul><li><a href="#net.createServer" title="net.createServer([options], [connectionListener])">net.createServer([options], [connectionListener])</a></li><li><a href="#net.createConnection" title="net.createConnection(arguments...)">net.createConnection(arguments...)</a></li><li><a href="#net.Server" title="net.Server">net.Server</a><ul><li><a href="#server.listen" title="server.listen(port, [host], [callback])">server.listen(port, [host], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.listenFD" title="server.listenFD(fd)">server.listenFD(fd)</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li><li><a href="#server.address" title="server.address()">server.address()</a></li><li><a href="#server.maxConnections" title="server.maxConnections">server.maxConnections</a></li><li><a href="#server.connections" title="server.connections">server.connections</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.Socket" title="net.Socket">net.Socket</a><ul><li><a href="#new_net.Socket" title="new net.Socket([options])">new net.Socket([options])</a></li><li><a href="#socket.connect" title="socket.connect(port, [host], [callback])">socket.connect(port, [host], [callback])</a></li><li><a href="#socket.connect" title="socket.connect(path, [callback])">socket.connect(path, [callback])</a></li><li><a href="#socket.bufferSize" title="socket.bufferSize">socket.bufferSize</a></li><li><a href="#socket.setEncoding" title="socket.setEncoding(encoding=null)">socket.setEncoding(encoding=null)</a></li><li><a href="#socket.setSecure" title="socket.setSecure()">socket.setSecure()</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [callback])">socket.write(data, [encoding], [callback])</a></li><li><a href="#socket.write" title="socket.write(data, [encoding], [fileDescriptor], [callback])">socket.write(data, [encoding], [fileDescriptor], [callback])</a></li><li><a href="#socket.end" title="socket.end([data], [encoding])">socket.end([data], [encoding])</a></li><li><a href="#socket.destroy" title="socket.destroy()">socket.destroy()</a></li><li><a href="#socket.pause" title="socket.pause()">socket.pause()</a></li><li><a href="#socket.resume" title="socket.resume()">socket.resume()</a></li><li><a href="#socket.setTimeout" title="socket.setTimeout(timeout, [callback])">socket.setTimeout(timeout, [callback])</a></li><li><a href="#socket.setNoDelay" title="socket.setNoDelay(noDelay=true)">socket.setNoDelay(noDelay=true)</a></li><li><a href="#socket.setKeepAlive" title="socket.setKeepAlive(enable=false, [initialDelay])">socket.setKeepAlive(enable=false, [initialDelay])</a></li><li><a href="#socket.remoteAddress" title="socket.remoteAddress">socket.remoteAddress</a></li><li><a href="#event_connect_" title="Event: 'connect'">Event: 'connect'</a></li><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#event_timeout_" title="Event: 'timeout'">Event: 'timeout'</a></li><li><a href="#event_drain_" title="Event: 'drain'">Event: 'drain'</a></li><li><a href="#event_error_" title="Event: 'error'">Event: 'error'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li></ul></li><li><a href="#net.isIP" title="net.isIP">net.isIP</a><ul><li><a href="#net.isIP" title="net.isIP(input)">net.isIP(input)</a></li><li><a href="#net.isIPv4" title="net.isIPv4(input)">net.isIPv4(input)</a></li><li><a href="#net.isIPv6" title="net.isIPv6(input)">net.isIPv6(input)</a></li></ul></li></ul></li><li><a href="#uDP_Datagram_Sockets" title="UDP / Datagram Sockets">UDP / Datagram Sockets</a><ul><li><a href="#event_message_" title="Event: 'message'">Event: 'message'</a></li><li><a href="#event_listening_" title="Event: 'listening'">Event: 'listening'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#dgram.createSocket" title="dgram.createSocket(type, [callback])">dgram.createSocket(type, [callback])</a></li><li><a href="#dgram.send" title="dgram.send(buf, offset, length, path, [callback])">dgram.send(buf, offset, length, path, [callback])</a></li><li><a href="#dgram.send" title="dgram.send(buf, offset, length, port, address, [callback])">dgram.send(buf, offset, length, port, address, [callback])</a></li><li><a href="#dgram.bind" title="dgram.bind(path)">dgram.bind(path)</a></li><li><a href="#dgram.bind" title="dgram.bind(port, [address])">dgram.bind(port, [address])</a></li><li><a href="#dgram.close" title="dgram.close()">dgram.close()</a></li><li><a href="#dgram.address" title="dgram.address()">dgram.address()</a></li><li><a href="#dgram.setBroadcast" title="dgram.setBroadcast(flag)">dgram.setBroadcast(flag)</a></li><li><a href="#dgram.setTTL" title="dgram.setTTL(ttl)">dgram.setTTL(ttl)</a></li><li><a href="#dgram.setMulticastTTL" title="dgram.setMulticastTTL(ttl)">dgram.setMulticastTTL(ttl)</a></li><li><a href="#dgram.setMulticastLoopback" title="dgram.setMulticastLoopback(flag)">dgram.setMulticastLoopback(flag)</a></li><li><a href="#dgram.addMembership" title="dgram.addMembership(multicastAddress, [multicastInterface])">dgram.addMembership(multicastAddress, [multicastInterface])</a></li><li><a href="#dgram.dropMembership" title="dgram.dropMembership(multicastAddress, [multicastInterface])">dgram.dropMembership(multicastAddress, [multicastInterface])</a></li></ul></li><li><a href="#dNS" title="DNS">DNS</a><ul><li><a href="#dns.lookup" title="dns.lookup(domain, family=null, callback)">dns.lookup(domain, family=null, callback)</a></li><li><a href="#dns.resolve" title="dns.resolve(domain, rrtype='A', callback)">dns.resolve(domain, rrtype='A', callback)</a></li><li><a href="#dns.resolve4" title="dns.resolve4(domain, callback)">dns.resolve4(domain, callback)</a></li><li><a href="#dns.resolve6" title="dns.resolve6(domain, callback)">dns.resolve6(domain, callback)</a></li><li><a href="#dns.resolveMx" title="dns.resolveMx(domain, callback)">dns.resolveMx(domain, callback)</a></li><li><a href="#dns.resolveTxt" title="dns.resolveTxt(domain, callback)">dns.resolveTxt(domain, callback)</a></li><li><a href="#dns.resolveSrv" title="dns.resolveSrv(domain, callback)">dns.resolveSrv(domain, callback)</a></li><li><a href="#dns.reverse" title="dns.reverse(ip, callback)">dns.reverse(ip, callback)</a></li></ul></li><li><a href="#hTTP" title="HTTP">HTTP</a></li><li><a href="#http.Server" title="http.Server">http.Server</a><ul><li><a href="#event_request_" title="Event: 'request'">Event: 'request'</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_checkContinue_" title="Event: 'checkContinue'">Event: 'checkContinue'</a></li><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_clientError_" title="Event: 'clientError'">Event: 'clientError'</a></li><li><a href="#http.createServer" title="http.createServer([requestListener])">http.createServer([requestListener])</a></li><li><a href="#server.listen" title="server.listen(port, [hostname], [callback])">server.listen(port, [hostname], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li></ul></li><li><a href="#http.ServerRequest" title="http.ServerRequest">http.ServerRequest</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#request.method" title="request.method">request.method</a></li><li><a href="#request.url" title="request.url">request.url</a></li><li><a href="#request.headers" title="request.headers">request.headers</a></li><li><a href="#request.trailers" title="request.trailers">request.trailers</a></li><li><a href="#request.httpVersion" title="request.httpVersion">request.httpVersion</a></li><li><a href="#request.setEncoding" title="request.setEncoding(encoding=null)">request.setEncoding(encoding=null)</a></li><li><a href="#request.pause" title="request.pause()">request.pause()</a></li><li><a href="#request.resume" title="request.resume()">request.resume()</a></li><li><a href="#request.connection" title="request.connection">request.connection</a></li></ul></li><li><a href="#http.ServerResponse" title="http.ServerResponse">http.ServerResponse</a><ul><li><a href="#response.writeContinue" title="response.writeContinue()">response.writeContinue()</a></li><li><a href="#response.writeHead" title="response.writeHead(statusCode, [reasonPhrase], [headers])">response.writeHead(statusCode, [reasonPhrase], [headers])</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.setHeader" title="response.setHeader(name, value)">response.setHeader(name, value)</a></li><li><a href="#response.getHeader" title="response.getHeader(name)">response.getHeader(name)</a></li><li><a href="#response.removeHeader" title="response.removeHeader(name)">response.removeHeader(name)</a></li><li><a href="#response.write" title="response.write(chunk, encoding='utf8')">response.write(chunk, encoding='utf8')</a></li><li><a href="#response.addTrailers" title="response.addTrailers(headers)">response.addTrailers(headers)</a></li><li><a href="#response.end" title="response.end([data], [encoding])">response.end([data], [encoding])</a></li></ul></li><li><a href="#http.request" title="http.request(options, callback)">http.request(options, callback)</a></li><li><a href="#http.get" title="http.get(options, callback)">http.get(options, callback)</a></li><li><a href="#http.Agent" title="http.Agent">http.Agent</a></li><li><a href="#http.getAgent" title="http.getAgent(host, port)">http.getAgent(host, port)</a><ul><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_continue_" title="Event: 'continue'">Event: 'continue'</a></li><li><a href="#agent.maxSockets" title="agent.maxSockets">agent.maxSockets</a></li><li><a href="#agent.sockets" title="agent.sockets">agent.sockets</a></li><li><a href="#agent.queue" title="agent.queue">agent.queue</a></li></ul></li><li><a href="#http.ClientRequest" title="http.ClientRequest">http.ClientRequest</a><ul><li><a href="#event_response_" title="Event 'response'">Event 'response'</a></li><li><a href="#request.write" title="request.write(chunk, encoding='utf8')">request.write(chunk, encoding='utf8')</a></li><li><a href="#request.end" title="request.end([data], [encoding])">request.end([data], [encoding])</a></li><li><a href="#request.abort" title="request.abort()">request.abort()</a></li></ul></li><li><a href="#http.ClientResponse" title="http.ClientResponse">http.ClientResponse</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.httpVersion" title="response.httpVersion">response.httpVersion</a></li><li><a href="#response.headers" title="response.headers">response.headers</a></li><li><a href="#response.trailers" title="response.trailers">response.trailers</a></li><li><a href="#response.setEncoding" title="response.setEncoding(encoding=null)">response.setEncoding(encoding=null)</a></li><li><a href="#response.pause" title="response.pause()">response.pause()</a></li><li><a href="#response.resume" title="response.resume()">response.resume()</a></li></ul></li><li><a href="#hTTPS" title="HTTPS">HTTPS</a></li><li><a href="#https.Server" title="https.Server">https.Server</a></li><li><a href="#https.createServer" title="https.createServer(options, [requestListener])">https.createServer(options, [requestListener])</a></li><li><a href="#https.request" title="https.request(options, callback)">https.request(options, callback)</a></li><li><a href="#https.get" title="https.get(options, callback)">https.get(options, callback)</a></li><li><a href="#uRL" title="URL">URL</a><ul><li><a href="#url.parse" title="url.parse(urlStr, parseQueryString=false)">url.parse(urlStr, parseQueryString=false)</a></li><li><a href="#url.format" title="url.format(urlObj)">url.format(urlObj)</a></li><li><a href="#url.resolve" title="url.resolve(from, to)">url.resolve(from, to)</a></li></ul></li><li><a href="#query_String" title="Query String">Query String</a><ul><li><a href="#querystring.stringify" title="querystring.stringify(obj, sep='&', eq='=')">querystring.stringify(obj, sep='&', eq='=')</a></li><li><a href="#querystring.parse" title="querystring.parse(str, sep='&', eq='=')">querystring.parse(str, sep='&', eq='=')</a></li><li><a href="#querystring.escape" title="querystring.escape">querystring.escape</a></li><li><a href="#querystring.unescape" title="querystring.unescape">querystring.unescape</a></li></ul></li><li><a href="#rEPL" title="REPL">REPL</a><ul><li><a href="#repl.start" title="repl.start(prompt='> ', stream=process.stdin)">repl.start(prompt='> ', stream=process.stdin)</a></li><li><a href="#rEPL_Features" title="REPL Features">REPL Features</a></li></ul></li><li><a href="#executing_JavaScript" title="Executing JavaScript">Executing JavaScript</a><ul><li><a href="#vm.runInThisContext" title="vm.runInThisContext(code, [filename])">vm.runInThisContext(code, [filename])</a></li><li><a href="#vm.runInNewContext" title="vm.runInNewContext(code, [sandbox], [filename])">vm.runInNewContext(code, [sandbox], [filename])</a></li><li><a href="#vm.createScript" title="vm.createScript(code, [filename])">vm.createScript(code, [filename])</a></li><li><a href="#script.runInThisContext" title="script.runInThisContext()">script.runInThisContext()</a></li><li><a href="#script.runInNewContext" title="script.runInNewContext([sandbox])">script.runInNewContext([sandbox])</a></li></ul></li><li><a href="#child_Processes" title="Child Processes">Child Processes</a><ul><li><a href="#event_exit_" title="Event:  'exit'">Event:  'exit'</a></li><li><a href="#child.stdin" title="child.stdin">child.stdin</a></li><li><a href="#child.stdout" title="child.stdout">child.stdout</a></li><li><a href="#child.stderr" title="child.stderr">child.stderr</a></li><li><a href="#child.pid" title="child.pid">child.pid</a></li><li><a href="#child_process.spawn" title="child_process.spawn(command, args=[], [options])">child_process.spawn(command, args=[], [options])</a></li><li><a href="#child_process.exec" title="child_process.exec(command, [options], callback)">child_process.exec(command, [options], callback)</a></li><li><a href="#child.kill" title="child.kill(signal='SIGTERM')">child.kill(signal='SIGTERM')</a></li></ul></li><li><a href="#assert" title="Assert">Assert</a><ul><li><a href="#assert.fail" title="assert.fail(actual, expected, message, operator)">assert.fail(actual, expected, message, operator)</a></li><li><a href="#assert.ok" title="assert.ok(value, [message])">assert.ok(value, [message])</a></li><li><a href="#assert.equal" title="assert.equal(actual, expected, [message])">assert.equal(actual, expected, [message])</a></li><li><a href="#assert.notEqual" title="assert.notEqual(actual, expected, [message])">assert.notEqual(actual, expected, [message])</a></li><li><a href="#assert.deepEqual" title="assert.deepEqual(actual, expected, [message])">assert.deepEqual(actual, expected, [message])</a></li><li><a href="#assert.notDeepEqual" title="assert.notDeepEqual(actual, expected, [message])">assert.notDeepEqual(actual, expected, [message])</a></li><li><a href="#assert.strictEqual" title="assert.strictEqual(actual, expected, [message])">assert.strictEqual(actual, expected, [message])</a></li><li><a href="#assert.notStrictEqual" title="assert.notStrictEqual(actual, expected, [message])">assert.notStrictEqual(actual, expected, [message])</a></li><li><a href="#assert.throws" title="assert.throws(block, [error], [message])">assert.throws(block, [error], [message])</a></li><li><a href="#assert.doesNotThrow" title="assert.doesNotThrow(block, [error], [message])">assert.doesNotThrow(block, [error], [message])</a></li><li><a href="#assert.ifError" title="assert.ifError(value)">assert.ifError(value)</a></li></ul></li><li><a href="#tTY" title="TTY">TTY</a><ul><li><a href="#tty.open" title="tty.open(path, args=[])">tty.open(path, args=[])</a></li><li><a href="#tty.isatty" title="tty.isatty(fd)">tty.isatty(fd)</a></li><li><a href="#tty.setRawMode" title="tty.setRawMode(mode)">tty.setRawMode(mode)</a></li><li><a href="#tty.setWindowSize" title="tty.setWindowSize(fd, row, col)">tty.setWindowSize(fd, row, col)</a></li><li><a href="#tty.getWindowSize" title="tty.getWindowSize(fd)">tty.getWindowSize(fd)</a></li></ul></li><li><a href="#os_Module" title="os Module">os Module</a><ul><li><a href="#os.hostname" title="os.hostname()">os.hostname()</a></li><li><a href="#os.type" title="os.type()">os.type()</a></li><li><a href="#os.release" title="os.release()">os.release()</a></li><li><a href="#os.uptime" title="os.uptime()">os.uptime()</a></li><li><a href="#os.loadavg" title="os.loadavg()">os.loadavg()</a></li><li><a href="#os.totalmem" title="os.totalmem()">os.totalmem()</a></li><li><a href="#os.freemem" title="os.freemem()">os.freemem()</a></li><li><a href="#os.cpus" title="os.cpus()">os.cpus()</a></li></ul></li><li><a href="#debugger" title="Debugger">Debugger</a><ul><li><a href="#advanced_Usage" title="Advanced Usage">Advanced Usage</a></li></ul></li></ul></li><li><a href="#appendixes" title="Appendixes">Appendixes</a><ul><li><a href="#appendix_1_Third_Party_Modules" title="Appendix 1 - Third Party Modules">Appendix 1 - Third Party Modules</a></li></ul></div>
 <h2 id="synopsis">Synopsis</h2>
 
 <p>An example of a <a href="http.html">web server</a> written with Node which responds with 'Hello
@@ -39,7 +41,8 @@ Server running at http://127.0.0.1:8124/</code></pre>
 
 <h2 id="global_Objects">Global Objects</h2>
 
-<p>These object are available in the global scope and can be accessed from anywhere.</p>
+<p>These object are available in all modules. Some of these objects aren't
+actually in the global scope but in the module scope - this will be noted.</p>
 
 <h3 id="global">global</h3>
 
@@ -52,11 +55,16 @@ scope; <code>var something</code> inside a Node module will be local to that mod
 
 <h3 id="process">process</h3>
 
-<p>The process object. See the 'process object' section.</p>
+<p>The process object. See the <a href="process.html#process">process object</a> section.</p>
+
+<h3 id="console">console</h3>
+
+<p>Used to print to stdout and stderr. See the <a href="stdio.html">stdio</a> section.</p>
 
 <h3 id="require">require()</h3>
 
-<p>To require modules. See the 'Modules' section.</p>
+<p>To require modules. See the <a href="modules.html#modules">Modules</a> section.
+<code>require</code> isn't actually a global but rather local to each module.</p>
 
 <h3 id="require.resolve">require.resolve()</h3>
 
@@ -82,6 +90,8 @@ the same filename passed in as a command line argument.</p>
 <pre><code>console.log(__filename);
 // /Users/mjr/example.js</code></pre>
 
+<p><code>__filename</code> isn't actually a global but rather local to each module.</p>
+
 <h3 id="__dirname">__dirname</h3>
 
 <p>The dirname of the script being executed.</p>
@@ -91,11 +101,74 @@ the same filename passed in as a command line argument.</p>
 <pre><code>console.log(__dirname);
 // /Users/mjr</code></pre>
 
+<p><code>__dirname</code> isn't actually a global but rather local to each module.</p>
+
 <h3 id="module">module</h3>
 
 <p>A reference to the current module. In particular
 <code>module.exports</code> is the same as the <code>exports</code> object. See <code>src/node.js</code>
-for more information.</p>
+for more information.
+<code>module</code> isn't actually a global but rather local to each module.</p>
+
+<h3 id="setTimeout">setTimeout(cb, ms)</h3>
+
+<h3 id="clearTimeout">clearTimeout(t)</h3>
+
+<h3 id="setInterval">setInterval(cb, ms)</h3>
+
+<h3 id="clearInterval">clearInterval(t)</h3>
+
+<p>The timer functions are global variables. See the <a href="timers.html">timers</a> section.</p>
+
+<h2 id="console">console</h2>
+
+<p>Browser-like object for printing to stdout and stderr.</p>
+
+<h3 id="console.log">console.log()</h3>
+
+<p>Prints to stdout with newline. This function can take multiple arguments in a
+<code>printf()</code>-like way. Example:</p>
+
+<pre><code>console.log('count: %d', count);</code></pre>
+
+<p>If formating elements are not found in the first string then <code>util.inspect</code>
+is used on each argument.</p>
+
+<h3 id="console.info">console.info()</h3>
+
+<p>Same as <code>console.log</code>.</p>
+
+<h3 id="console.warn">console.warn()</h3>
+
+<h3 id="console.error">console.error()</h3>
+
+<p>Same as <code>console.log</code> but prints to stderr.</p>
+
+<h3 id="console.dir">console.dir(obj)</h3>
+
+<p>Uses <code>util.inspect</code> on <code>obj</code> and prints resulting string to stderr.</p>
+
+<h3 id="console.time">console.time(label)</h3>
+
+<p>Mark a time.</p>
+
+<h3 id="console.timeEnd">console.timeEnd(label)</h3>
+
+<p>Finish timer, record output. Example</p>
+
+<pre><code>console.time('100-elements');
+while (var i = 0; i &lt; 100; i++) {
+  ;
+}
+console.timeEnd('100-elements');</code></pre>
+
+<h3 id="console.trace">console.trace()</h3>
+
+<p>Print a stack trace to stderr of the current position.</p>
+
+<h3 id="console.assert">console.assert()</h3>
+
+<p>Same as <code>assert.ok()</code>.</p>
 
 <h2 id="timers">Timers</h2>
 
@@ -120,8 +193,6 @@ you can also pass arguments to the callback.</p>
 <p>Stops a interval from triggering.</p>
 
 <h2 id="modules">Modules</h2>
-
-<p>Node uses the CommonJS module system.</p>
 
 <p>Node has a simple module loading system.  In Node, files and modules are in
 one-to-one correspondence.  As an example, <code>foo.js</code> loads the module
@@ -255,6 +326,44 @@ example, then <code>require('./some-library')</code> would attempt to load:</p>
 <p>Modules are cached after the first time they are loaded.  This means
 (among other things) that every call to <code>require('foo')</code> will get
 exactly the same object returned, if it would resolve to the same file.</p>
+
+<h3 id="module.exports">module.exports</h3>
+
+<p>The <code>exports</code> object is created by the Module system. Sometimes this is not
+acceptable, many want their module to be an instance of some class. To do this
+assign the desired export object to <code>module.exports</code>. For example suppose we
+were making a module called <code>a.js</code></p>
+
+<pre><code>var EventEmitter = require('events').EventEmitter;
+
+module.exports = new EventEmitter();
+
+// Do some work, and after some time emit
+// the 'ready' event from the module itself.
+setTimeout(function() {
+  module.exports.emit('ready');
+}, 1000);</code></pre>
+
+<p>Then in another file we could do</p>
+
+<pre><code>var a = require('./a');
+a.on('ready', function() {
+  console.log('module a is ready');
+});</code></pre>
+
+<p>Note that assignment to <code>module.exports</code> must be done immediately. It cannot be
+done in any callbacks.  This does not work:</p>
+
+<p>x.js:</p>
+
+<pre><code>setTimeout(function() {
+  module.exports = { a: "hello" };
+}, 0);</code></pre>
+
+<p>y.js</p>
+
+<pre><code>var x = require('./x');
+console.log(x.a);</code></pre>
 
 <h3 id="all_Together...">All Together...</h3>
 
@@ -796,10 +905,6 @@ oldmask = process.umask(newmask);
 console.log('Changed umask from: ' + oldmask.toString(8) +
             ' to ' + newmask.toString(8));</code></pre>
 
-<h3 id="process.uptime">process.uptime()</h3>
-
-<p>Number of seconds Node has been running.</p>
-
 <h2 id="util">util</h2>
 
 <p>These functions are in the module <code>'util'</code>. Use <code>require('util')</code> to access
@@ -987,9 +1092,9 @@ method.  Here are the different string encodings;</p>
 <ul><li><p><code>'ascii'</code> - for 7 bit ASCII data only.  This encoding method is very fast, and will
 strip the high bit if set.</p></li><li><p><code>'utf8'</code> - Multi byte encoded Unicode characters.  Many web pages and other document formats use UTF-8.</p></li><li><p><code>'ucs2'</code> - 2-bytes, little endian encoded Unicode characters. It can encode
 only BMP(Basic Multilingual Plane, U+0000 - U+FFFF).</p></li><li><p><code>'base64'</code> - Base64 string encoding.</p></li><li><p><code>'binary'</code> - A way of encoding raw binary data into strings by using only
-the first 8 bits of each character. This encoding method is depreciated and
+the first 8 bits of each character. This encoding method is deprecated and
 should be avoided in favor of <code>Buffer</code> objects where possible. This encoding
-will be removed in future versions of Node.</p></li><li><p><code>'hex'</code> - Encode each byte as two hexidecimal characters.</p></li></ul>
+will be removed in future versions of Node.</p></li></ul>
 
 <h3 id="new_Buffer">new Buffer(size)</h3>
 
@@ -1007,16 +1112,18 @@ will be removed in future versions of Node.</p></li><li><p><code>'hex'</code> - 
 
 <p>Writes <code>string</code> to the buffer at <code>offset</code> using the given encoding. Returns
 number of octets written.  If <code>buffer</code> did not contain enough space to fit
-the entire string, it will write a partial amount of the string. In the case
-of <code>'utf8'</code> encoding, the method will not write partial characters.</p>
+the entire string, it will write a partial amount of the string.
+The method will not write partial characters.</p>
 
 <p>Example: write a utf8 string into a buffer, then print it</p>
 
 <pre><code>buf = new Buffer(256);
 len = buf.write('\u00bd + \u00bc = \u00be', 0);
-console.log(len + " bytes: " + buf.toString('utf8', 0, len));
+console.log(len + " bytes: " + buf.toString('utf8', 0, len));</code></pre>
 
-// 12 bytes: ½ + ¼ = ¾</code></pre>
+<p>The number of characters written (which may be different than the number of
+bytes written) is set in <code>Buffer._charsWritten</code> and will be overwritten the
+next time <code>buf.write()</code> is called.</p>
 
 <h3 id="buffer.toString">buffer.toString(encoding, start=0, end=buffer.length)</h3>
 
@@ -1294,6 +1401,12 @@ or FIN. This is useful to reduce the number of packets sent.</p>
 
 <p>Closes the underlying file descriptor. Stream will not emit any more events.</p>
 
+<h3 id="stream.destroySoon">stream.destroySoon()</h3>
+
+<p>After the write queue is drained, close the file descriptor. <code>destroySoon()</code>
+can still destroy straight away, as long as there is no data left in the queue
+for writes.</p>
+
 <h2 id="crypto">Crypto</h2>
 
 <p>Use <code>require('crypto')</code> to access this module.</p>
@@ -1321,6 +1434,24 @@ which can be used to generate hash digests.</p>
 <p><code>algorithm</code> is dependent on the available algorithms supported by the version
 of OpenSSL on the platform. Examples are <code>'sha1'</code>, <code>'md5'</code>, <code>'sha256'</code>, <code>'sha512'</code>, etc.
 On recent releases, <code>openssl list-message-digest-algorithms</code> will display the available digest algorithms.</p>
+
+<p>Example: this program that takes the sha1 sum of a file</p>
+
+<pre><code>var filename = process.argv[2];
+var crypto = require('crypto');
+var fs = require('fs');
+
+var shasum = crypto.createHash('sha1');
+
+var s = fs.ReadStream(filename);
+s.on('data', function(d) {
+  shasum.update(d);
+});
+
+s.on('end', function() {
+  var d = shasum.digest('hex');
+  console.log(d + '  ' + filename);
+});</code></pre>
 
 <h3 id="hash.update">hash.update(data)</h3>
 
@@ -1414,7 +1545,7 @@ This can be called many times with new data as it is streamed.</p>
 <h3 id="verifier.verify">verifier.verify(cert, signature, signature_format='binary')</h3>
 
 <p>Verifies the signed data by using the <code>cert</code> which is a string containing
-the PEM encoded public key, and <code>signature</code>, which is the previously calculates
+the PEM encoded certificate, and <code>signature</code>, which is the previously calculates
 signature for the data, in the <code>signature_format</code> which can be <code>'binary'</code>, <code>'hex'</code> or <code>'base64'</code>.</p>
 
 <p>Returns true or false depending on the validity of the signature for the data and public key.</p>
@@ -1465,6 +1596,16 @@ called no matter if the server's certificate was authorized or not. It is up
 to the user to test <code>s.authorized</code> to see if the server certificate was
 signed by one of the specified CAs. If <code>s.authorized === false</code> then the error
 can be found in <code>s.authorizationError</code>.</p>
+
+<h3 id="sTARTTLS">STARTTLS</h3>
+
+<p>In the v0.4 branch no function exists for starting a TLS session on an
+already existing TCP connection.  This is possible it just requires a bit of
+work. The technique is to use <code>tls.createSecurePair()</code> which returns two
+streams: an encrypted stream and a plaintext stream. The encrypted stream is then
+piped to the socket, the plaintext stream is what the user interacts with thereafter.</p>
+
+<p><a href="http://gist.github.com/848444">Here is some code that does it.</a></p>
 
 <h3 id="tls.Server">tls.Server</h3>
 
@@ -1630,7 +1771,7 @@ to the completion callback.</p>
 <h3 id="fs.stat">fs.stat(path, [callback])</h3>
 
 <p>Asynchronous stat(2). The callback gets two arguments <code>(err, stats)</code> where
-<code>stats</code> is a <code>fs.Stats</code> object. It looks like this:</p>
+<code>stats</code> is a <a href="#fs.Stats">`fs.Stats`</a> object. It looks like this:</p>
 
 <pre><code>{ dev: 2049,
   ino: 305352,
@@ -1646,7 +1787,7 @@ to the completion callback.</p>
   mtime: '2009-06-29T11:11:40Z',
   ctime: '2009-06-29T11:11:40Z' }</code></pre>
 
-<p>See the <code>fs.Stats</code> section below for more information.</p>
+<p>See the <a href="#fs.Stats">fs.Stats</a> section below for more information.</p>
 
 <h3 id="fs.lstat">fs.lstat(path, [callback])</h3>
 
@@ -1764,19 +1905,6 @@ or 'a+'. <code>mode</code> defaults to 0666. The callback gets two arguments <co
 
 <p>Synchronous open(2).</p>
 
-<h3 id="fs.utimes">fs.utimes(path, atime, mtime, callback)</h3>
-
-<h3 id="fs.utimesSync">fs.utimesSync(path, atime, mtime)</h3>
-
-<p>Change file timestamps.</p>
-
-<h3 id="fs.futimes">fs.futimes(path, atime, mtime, callback)</h3>
-
-<h3 id="fs.futimesSync">fs.futimesSync(path, atime, mtime)</h3>
-
-<p>Change file timestamps with the difference that if filename refers to a
-symbolic link, then the link is not dereferenced.</p>
-
 <h3 id="fs.write">fs.write(fd, buffer, offset, length, position, [callback])</h3>
 
 <p>Write <code>buffer</code> to the file specified by <code>fd</code>.</p>
@@ -1788,8 +1916,12 @@ should be written. If <code>position</code> is <code>null</code>, the data will 
 current position.
 See pwrite(2).</p>
 
-<p>The callback will be given two arguments <code>(err, written)</code> where <code>written</code>
-specifies how many <em>bytes</em> were written.</p>
+<p>The callback will be given three arguments <code>(err, written, buffer)</code> where <code>written</code>
+specifies how many <em>bytes</em> were written into <code>buffer</code>.</p>
+
+<p>Note that it is unsafe to use <code>fs.write</code> multiple times on the same file
+without waiting for the callback. For this scenario,
+<code>fs.createWriteStream</code> is strongly recommended.</p>
 
 <h3 id="fs.writeSync">fs.writeSync(fd, buffer, offset, length, position)</h3>
 
@@ -1814,7 +1946,7 @@ written.</p>
 <p><code>position</code> is an integer specifying where to begin reading from in the file.
 If <code>position</code> is <code>null</code>, data will be read from the current file position.</p>
 
-<p>The callback is given the two arguments, <code>(err, bytesRead)</code>.</p>
+<p>The callback is given the three arguments, <code>(err, bytesRead, buffer)</code>.</p>
 
 <h3 id="fs.readSync">fs.readSync(fd, buffer, offset, length, position)</h3>
 
@@ -1849,7 +1981,8 @@ returns a buffer.</p>
 
 <h3 id="fs.writeFile">fs.writeFile(filename, data, encoding='utf8', [callback])</h3>
 
-<p>Asynchronously writes data to a file. <code>data</code> can be a string or a buffer.</p>
+<p>Asynchronously writes data to a file, replacing the file if it already exists.
+<code>data</code> can be a string or a buffer.</p>
 
 <p>Example:</p>
 
@@ -1913,7 +2046,7 @@ you need to compare <code>curr.mtime</code> and `prev.mtime.</p>
 
 <p><code>options</code> can include <code>start</code> and <code>end</code> values to read a range of bytes from
 the file instead of the entire file.  Both <code>start</code> and <code>end</code> are inclusive and
-start at 0.  When used, both the limits must be specified always.</p>
+start at 0.</p>
 
 <p>An example to read the last 10 bytes of a file which is 100 bytes long:</p>
 
@@ -2276,7 +2409,7 @@ received.</p>
 <h4 id="socket.setSecure">socket.setSecure()</h4>
 
 <p>This function has been removed in v0.3. It used to upgrade the connection to
-SSL/TLS. See the TLS for the new API.</p>
+SSL/TLS. See the <a href="tls.html#tLS_">TLS section</a> for the new API.</p>
 
 <h4 id="socket.write">socket.write(data, [encoding], [callback])</h4>
 
@@ -2366,7 +2499,7 @@ See <code>connect()</code>.</p>
 
 <p>Emitted when data is received.  The argument <code>data</code> will be a <code>Buffer</code> or
 <code>String</code>.  Encoding of data is set by <code>socket.setEncoding()</code>.
-(See the section on <code>Readable Socket</code> for more information.)</p>
+(See the <a href="streams.html#readable_Stream">Readable Stream</a> section for more information.)</p>
 
 <h4 id="event_end_">Event: 'end'</h4>
 
@@ -2425,101 +2558,6 @@ returns 4 for IP version 4 addresses, and returns 6 for IP version 6 addresses.<
 <h4 id="net.isIPv6">net.isIPv6(input)</h4>
 
 <p>Returns true if input is a version 6 IP address, otherwise returns false.</p>
-
-<h2 id="dNS">DNS</h2>
-
-<p>Use <code>require('dns')</code> to access this module.</p>
-
-<p>Here is an example which resolves <code>'www.google.com'</code> then reverse
-resolves the IP addresses which are returned.</p>
-
-<pre><code>var dns = require('dns');
-
-dns.resolve4('www.google.com', function (err, addresses) {
-  if (err) throw err;
-
-  console.log('addresses: ' + JSON.stringify(addresses));
-
-  addresses.forEach(function (a) {
-    dns.reverse(a, function (err, domains) {
-      if (err) {
-        console.log('reverse for ' + a + ' failed: ' +
-          err.message);
-      } else {
-        console.log('reverse for ' + a + ': ' +
-          JSON.stringify(domains));
-      }
-    });
-  });
-});</code></pre>
-
-<h3 id="dns.lookup">dns.lookup(domain, family=null, callback)</h3>
-
-<p>Resolves a domain (e.g. <code>'google.com'</code>) into the first found A (IPv4) or
-AAAA (IPv6) record.</p>
-
-<p>The callback has arguments <code>(err, address, family)</code>.  The <code>address</code> argument
-is a string representation of a IP v4 or v6 address. The <code>family</code> argument
-is either the integer 4 or 6 and denotes the family of <code>address</code> (not
-necessarily the value initially passed to <code>lookup</code>).</p>
-
-<h3 id="dns.resolve">dns.resolve(domain, rrtype='A', callback)</h3>
-
-<p>Resolves a domain (e.g. <code>'google.com'</code>) into an array of the record types
-specified by rrtype. Valid rrtypes are <code>A</code> (IPV4 addresses), <code>AAAA</code> (IPV6
-addresses), <code>MX</code> (mail exchange records), <code>TXT</code> (text records), <code>SRV</code> (SRV
-records), and <code>PTR</code> (used for reverse IP lookups).</p>
-
-<p>The callback has arguments <code>(err, addresses)</code>.  The type of each item
-in <code>addresses</code> is determined by the record type, and described in the
-documentation for the corresponding lookup methods below.</p>
-
-<p>On error, <code>err</code> would be an instanceof <code>Error</code> object, where <code>err.errno</code> is
-one of the error codes listed below and <code>err.message</code> is a string describing
-the error in English.</p>
-
-<h3 id="dns.resolve4">dns.resolve4(domain, callback)</h3>
-
-<p>The same as <code>dns.resolve()</code>, but only for IPv4 queries (<code>A</code> records).
-<code>addresses</code> is an array of IPv4 addresses (e.g.
-<code>['74.125.79.104', '74.125.79.105', '74.125.79.106']</code>).</p>
-
-<h3 id="dns.resolve6">dns.resolve6(domain, callback)</h3>
-
-<p>The same as <code>dns.resolve4()</code> except for IPv6 queries (an <code>AAAA</code> query).</p>
-
-<h3 id="dns.resolveMx">dns.resolveMx(domain, callback)</h3>
-
-<p>The same as <code>dns.resolve()</code>, but only for mail exchange queries (<code>MX</code> records).</p>
-
-<p><code>addresses</code> is an array of MX records, each with a priority and an exchange
-attribute (e.g. <code>[{'priority': 10, 'exchange': 'mx.example.com'},...]</code>).</p>
-
-<h3 id="dns.resolveTxt">dns.resolveTxt(domain, callback)</h3>
-
-<p>The same as <code>dns.resolve()</code>, but only for text queries (<code>TXT</code> records).
-<code>addresses</code> is an array of the text records available for <code>domain</code> (e.g.,
-<code>['v=spf1 ip4:0.0.0.0 ~all']</code>).</p>
-
-<h3 id="dns.resolveSrv">dns.resolveSrv(domain, callback)</h3>
-
-<p>The same as <code>dns.resolve()</code>, but only for service records (<code>SRV</code> records).
-<code>addresses</code> is an array of the SRV records available for <code>domain</code>. Properties
-of SRV records are priority, weight, port, and name (e.g.,
-<code>[{'priority': 10, {'weight': 5, 'port': 21223, 'name': 'service.example.com'}, ...]</code>).</p>
-
-<h3 id="dns.reverse">dns.reverse(ip, callback)</h3>
-
-<p>Reverse resolves an ip address to an array of domain names.</p>
-
-<p>The callback has arguments <code>(err, domains)</code>.</p>
-
-<p>If there an an error, <code>err</code> will be non-null and an instanceof the Error
-object.</p>
-
-<p>Each DNS query can return an error code.</p>
-
-<ul><li><code>dns.TEMPFAIL</code>: timeout, SERVFAIL or similar.</li><li><code>dns.PROTOCOL</code>: got garbled reply.</li><li><code>dns.NXDOMAIN</code>: domain does not exists.</li><li><code>dns.NODATA</code>: domain exists but no data of reqd type.</li><li><code>dns.NOMEM</code>: out of memory while processing.</li><li><code>dns.BADQUERY</code>: the query is malformed.</li></ul>
 
 <h2 id="uDP_Datagram_Sockets">UDP / Datagram Sockets</h2>
 
@@ -2646,7 +2684,6 @@ client.bind(clientPath);</code></pre>
 <pre><code>var dgram = require("dgram");
 
 var server = dgram.createSocket("udp4");
-var messageToSend = new Buffer("A message to send");
 
 server.on("message", function (msg, rinfo) {
   console.log("server got: " + msg + " from " +
@@ -2721,6 +2758,101 @@ this.</p>
 <p>If <code>multicastAddress</code> is not specified, the OS will try to drop membership to all valid
 interfaces.</p>
 
+<h2 id="dNS">DNS</h2>
+
+<p>Use <code>require('dns')</code> to access this module.</p>
+
+<p>Here is an example which resolves <code>'www.google.com'</code> then reverse
+resolves the IP addresses which are returned.</p>
+
+<pre><code>var dns = require('dns');
+
+dns.resolve4('www.google.com', function (err, addresses) {
+  if (err) throw err;
+
+  console.log('addresses: ' + JSON.stringify(addresses));
+
+  addresses.forEach(function (a) {
+    dns.reverse(a, function (err, domains) {
+      if (err) {
+        console.log('reverse for ' + a + ' failed: ' +
+          err.message);
+      } else {
+        console.log('reverse for ' + a + ': ' +
+          JSON.stringify(domains));
+      }
+    });
+  });
+});</code></pre>
+
+<h3 id="dns.lookup">dns.lookup(domain, family=null, callback)</h3>
+
+<p>Resolves a domain (e.g. <code>'google.com'</code>) into the first found A (IPv4) or
+AAAA (IPv6) record.</p>
+
+<p>The callback has arguments <code>(err, address, family)</code>.  The <code>address</code> argument
+is a string representation of a IP v4 or v6 address. The <code>family</code> argument
+is either the integer 4 or 6 and denotes the family of <code>address</code> (not
+necessarily the value initially passed to <code>lookup</code>).</p>
+
+<h3 id="dns.resolve">dns.resolve(domain, rrtype='A', callback)</h3>
+
+<p>Resolves a domain (e.g. <code>'google.com'</code>) into an array of the record types
+specified by rrtype. Valid rrtypes are <code>A</code> (IPV4 addresses), <code>AAAA</code> (IPV6
+addresses), <code>MX</code> (mail exchange records), <code>TXT</code> (text records), <code>SRV</code> (SRV
+records), and <code>PTR</code> (used for reverse IP lookups).</p>
+
+<p>The callback has arguments <code>(err, addresses)</code>.  The type of each item
+in <code>addresses</code> is determined by the record type, and described in the
+documentation for the corresponding lookup methods below.</p>
+
+<p>On error, <code>err</code> would be an instanceof <code>Error</code> object, where <code>err.errno</code> is
+one of the error codes listed below and <code>err.message</code> is a string describing
+the error in English.</p>
+
+<h3 id="dns.resolve4">dns.resolve4(domain, callback)</h3>
+
+<p>The same as <code>dns.resolve()</code>, but only for IPv4 queries (<code>A</code> records).
+<code>addresses</code> is an array of IPv4 addresses (e.g.
+<code>['74.125.79.104', '74.125.79.105', '74.125.79.106']</code>).</p>
+
+<h3 id="dns.resolve6">dns.resolve6(domain, callback)</h3>
+
+<p>The same as <code>dns.resolve4()</code> except for IPv6 queries (an <code>AAAA</code> query).</p>
+
+<h3 id="dns.resolveMx">dns.resolveMx(domain, callback)</h3>
+
+<p>The same as <code>dns.resolve()</code>, but only for mail exchange queries (<code>MX</code> records).</p>
+
+<p><code>addresses</code> is an array of MX records, each with a priority and an exchange
+attribute (e.g. <code>[{'priority': 10, 'exchange': 'mx.example.com'},...]</code>).</p>
+
+<h3 id="dns.resolveTxt">dns.resolveTxt(domain, callback)</h3>
+
+<p>The same as <code>dns.resolve()</code>, but only for text queries (<code>TXT</code> records).
+<code>addresses</code> is an array of the text records available for <code>domain</code> (e.g.,
+<code>['v=spf1 ip4:0.0.0.0 ~all']</code>).</p>
+
+<h3 id="dns.resolveSrv">dns.resolveSrv(domain, callback)</h3>
+
+<p>The same as <code>dns.resolve()</code>, but only for service records (<code>SRV</code> records).
+<code>addresses</code> is an array of the SRV records available for <code>domain</code>. Properties
+of SRV records are priority, weight, port, and name (e.g.,
+<code>[{'priority': 10, {'weight': 5, 'port': 21223, 'name': 'service.example.com'}, ...]</code>).</p>
+
+<h3 id="dns.reverse">dns.reverse(ip, callback)</h3>
+
+<p>Reverse resolves an ip address to an array of domain names.</p>
+
+<p>The callback has arguments <code>(err, domains)</code>.</p>
+
+<p>If there an an error, <code>err</code> will be non-null and an instanceof the Error
+object.</p>
+
+<p>Each DNS query can return an error code.</p>
+
+<ul><li><code>dns.TEMPFAIL</code>: timeout, SERVFAIL or similar.</li><li><code>dns.PROTOCOL</code>: got garbled reply.</li><li><code>dns.NXDOMAIN</code>: domain does not exists.</li><li><code>dns.NODATA</code>: domain exists but no data of reqd type.</li><li><code>dns.NOMEM</code>: out of memory while processing.</li><li><code>dns.BADQUERY</code>: the query is malformed.</li></ul>
+
 <h2 id="hTTP">HTTP</h2>
 
 <p>To use the HTTP server and client one must <code>require('http')</code>.</p>
@@ -2753,7 +2885,9 @@ parse the actual headers or the body.</p>
 
 <p><code>function (request, response) { }</code></p>
 
-<p> <code>request</code> is an instance of <code>http.ServerRequest</code> and <code>response</code> is
+<p>Emitted each time there is request. Note that there may be multiple requests
+per connection (in the case of keep-alive connections).
+ <code>request</code> is an instance of <code>http.ServerRequest</code> and <code>response</code> is
  an instance of <code>http.ServerResponse</code></p>
 
 <h3 id="event_connection_">Event: 'connection'</h3>
@@ -2769,13 +2903,6 @@ parse the actual headers or the body.</p>
 <p><code>function (errno) { }</code></p>
 
 <p> Emitted when the server closes.</p>
-
-<h3 id="event_request_">Event: 'request'</h3>
-
-<p><code>function (request, response) {}</code></p>
-
-<p>Emitted each time there is request. Note that there may be multiple requests
-per connection (in the case of keep-alive connections).</p>
 
 <h3 id="event_checkContinue_">Event: 'checkContinue'</h3>
 
@@ -2813,7 +2940,7 @@ sent to the server on that socket.</p>
 
 <p>If a client connection emits an 'error' event - it will forwarded here.</p>
 
-<h3 id="http.createServer">http.createServer(requestListener)</h3>
+<h3 id="http.createServer">http.createServer([requestListener])</h3>
 
 <p>Returns a new web server object.</p>
 
@@ -2858,7 +2985,7 @@ the user -- and passed as the first argument to a <code>'request'</code> listene
 <p>Example: A chunk of the body is given as the single
 argument. The transfer-encoding has been decoded.  The
 body chunk is a string.  The body encoding is set with
-<code>request.setBodyEncoding()</code>.</p>
+<code>request.setEncoding()</code>.</p>
 
 <h3 id="event_end_">Event: 'end'</h3>
 
@@ -2948,7 +3075,7 @@ passed as the second parameter to the <code>'request'</code> event. It is a <cod
 <h3 id="response.writeContinue">response.writeContinue()</h3>
 
 <p>Sends a HTTP/1.1 100 Continue message to the client, indicating that
-the request body should be sent. See the the <code>checkContinue</code> event on
+the request body should be sent. See the <a href="#event_checkContinue_">checkContinue</a> event on
 <code>Server</code>.</p>
 
 <h3 id="response.writeHead">response.writeHead(statusCode, [reasonPhrase], [headers])</h3>
@@ -2970,6 +3097,11 @@ be called before <code>response.end()</code> is called.</p>
 
 <p>If you call <code>response.write()</code> or <code>response.end()</code> before calling this, the
 implicit/mutable headers will be calculated and call this function for you.</p>
+
+<p>Note: that Content-Length is given in bytes not characters. The above example
+works because the string <code>'hello world'</code> contains only single byte characters.
+If the body contains higher coded characters then <code>Buffer.byteLength()</code>
+should be used to determine the number of bytes in a given encoding.</p>
 
 <h3 id="response.statusCode">response.statusCode</h3>
 
@@ -3153,7 +3285,7 @@ agent. The <code>http.getAgent()</code> function allows you to access the agents
 isn't being listened for, clients receiving an upgrade header will have their
 connections closed.</p>
 
-<p>See the description of the <code>upgrade</code> event for <code>http.Server</code> for further details.</p>
+<p>See the description of the <a href="http.html#event_upgrade_">upgrade event</a> for <code>http.Server</code> for further details.</p>
 
 <h3 id="event_continue_">Event: 'continue'</h3>
 
@@ -3178,7 +3310,7 @@ the client should send the request body.</p>
 <h2 id="http.ClientRequest">http.ClientRequest</h2>
 
 <p>This object is created internally and returned from <code>http.request()</code>.  It
-represents an <em>in-progress</em> request whose header has already been queued.  The 
+represents an <em>in-progress</em> request whose header has already been queued.  The
 header is still mutable using the <code>setHeader(name, value)</code>, <code>getHeader(name)</code>,
 <code>removeHeader(name)</code> API.  The actual header will be sent along with the first
 data chunk or when closing the connection.</p>
@@ -3308,7 +3440,14 @@ separate module.</p>
 
 <h2 id="https.Server">https.Server</h2>
 
-<h2 id="https.createServer">https.createServer</h2>
+<p>This class is a subclass of <code>tls.Server</code> and emits events same as
+<code>http.Server</code>. See <code>http.Server</code> for more information.</p>
+
+<h2 id="https.createServer">https.createServer(options, [requestListener])</h2>
+
+<p>Returns a new HTTPS web server object. The <code>options</code> is similer to
+<code>tls.createServer()</code>. The <code>requestListener</code> is a function which is
+automatically added to the <code>'request'</code> event.</p>
 
 <p>Example:</p>
 
@@ -3548,6 +3687,135 @@ repl.start().context.m = msg;</code></pre>
 <ul><li><code>.break</code> - While inputting a multi-line expression, sometimes you get lost
 or just don't care about completing it. <code>.break</code> will start over.</li><li><code>.clear</code> - Resets the <code>context</code> object to an empty object and clears any multi-line expression.</li><li><code>.exit</code> - Close the I/O stream, which will cause the REPL to exit.</li><li><code>.help</code> - Show this list of special commands.</li></ul>
 
+<h2 id="executing_JavaScript">Executing JavaScript</h2>
+
+<p>You can access this module with:</p>
+
+<pre><code>var vm = require('vm');</code></pre>
+
+<p>JavaScript code can be compiled and run immediately or compiled, saved, and run later.</p>
+
+<h3 id="vm.runInThisContext">vm.runInThisContext(code, [filename])</h3>
+
+<p><code>vm.runInThisContext()</code> compiles <code>code</code> as if it were loaded from <code>filename</code>,
+runs it and returns the result. Running code does not have access to local scope. <code>filename</code> is optional.</p>
+
+<p>Example of using <code>vm.runInThisContext</code> and <code>eval</code> to run the same code:</p>
+
+<pre><code>var localVar = 123,
+    usingscript, evaled,
+    vm = require('vm');
+
+usingscript = vm.runInThisContext('localVar = 1;',
+  'myfile.vm');
+console.log('localVar: ' + localVar + ', usingscript: ' +
+  usingscript);
+evaled = eval('localVar = 1;');
+console.log('localVar: ' + localVar + ', evaled: ' +
+  evaled);
+
+// localVar: 123, usingscript: 1
+// localVar: 1, evaled: 1</code></pre>
+
+<p><code>vm.runInThisContext</code> does not have access to the local scope, so <code>localVar</code> is unchanged.
+<code>eval</code> does have access to the local scope, so <code>localVar</code> is changed.</p>
+
+<p>In case of syntax error in <code>code</code>, <code>vm.runInThisContext</code> emits the syntax error to stderr
+and throws an exception.</p>
+
+<h3 id="vm.runInNewContext">vm.runInNewContext(code, [sandbox], [filename])</h3>
+
+<p><code>vm.runInNewContext</code> compiles <code>code</code> to run in <code>sandbox</code> as if it were loaded from <code>filename</code>,
+then runs it and returns the result. Running code does not have access to local scope and
+the object <code>sandbox</code> will be used as the global object for <code>code</code>.
+<code>sandbox</code> and <code>filename</code> are optional.</p>
+
+<p>Example: compile and execute code that increments a global variable and sets a new one.
+These globals are contained in the sandbox.</p>
+
+<pre><code>var util = require('util'),
+    vm = require('vm'),
+    sandbox = {
+      animal: 'cat',
+      count: 2
+    };
+
+vm.runInNewContext('count += 1; name = "kitty"', sandbox, 'myfile.vm');
+console.log(util.inspect(sandbox));
+
+// { animal: 'cat', count: 3, name: 'kitty' }</code></pre>
+
+<p>Note that running untrusted code is a tricky business requiring great care.  To prevent accidental
+global variable leakage, <code>vm.runInNewContext</code> is quite useful, but safely running untrusted code
+requires a separate process.</p>
+
+<p>In case of syntax error in <code>code</code>, <code>vm.runInNewContext</code> emits the syntax error to stderr
+and throws an exception.</p>
+
+<h3 id="vm.createScript">vm.createScript(code, [filename])</h3>
+
+<p><code>createScript</code> compiles <code>code</code> as if it were loaded from <code>filename</code>,
+but does not run it. Instead, it returns a <code>vm.Script</code> object representing this compiled code.
+This script can be run later many times using methods below.
+The returned script is not bound to any global object.
+It is bound before each run, just for that run. <code>filename</code> is optional.</p>
+
+<p>In case of syntax error in <code>code</code>, <code>createScript</code> prints the syntax error to stderr
+and throws an exception.</p>
+
+<h3 id="script.runInThisContext">script.runInThisContext()</h3>
+
+<p>Similar to <code>vm.runInThisContext</code> but a method of a precompiled <code>Script</code> object.
+<code>script.runInThisContext</code> runs the code of <code>script</code> and returns the result.
+Running code does not have access to local scope, but does have access to the <code>global</code> object
+(v8: in actual context).</p>
+
+<p>Example of using <code>script.runInThisContext</code> to compile code once and run it multiple times:</p>
+
+<pre><code>var vm = require('vm');
+
+globalVar = 0;
+
+var script = vm.createScript('globalVar += 1', 'myfile.vm');
+
+for (var i = 0; i &lt; 1000 ; i += 1) {
+  script.runInThisContext();
+}
+
+console.log(globalVar);
+
+// 1000</code></pre>
+
+<h3 id="script.runInNewContext">script.runInNewContext([sandbox])</h3>
+
+<p>Similar to <code>vm.runInNewContext</code> a method of a precompiled <code>Script</code> object.
+<code>script.runInNewContext</code> runs the code of <code>script</code> with <code>sandbox</code> as the global object and returns the result.
+Running code does not have access to local scope. <code>sandbox</code> is optional.</p>
+
+<p>Example: compile code that increments a global variable and sets one, then execute this code multiple times.
+These globals are contained in the sandbox.</p>
+
+<pre><code>var util = require('util'),
+    vm = require('vm'),
+    sandbox = {
+      animal: 'cat',
+      count: 2
+    };
+
+var script = vm.createScript('count += 1; name = "kitty"', 'myfile.vm');
+
+for (var i = 0; i &lt; 10 ; i += 1) {
+  script.runInNewContext(sandbox);
+}
+
+console.log(util.inspect(sandbox));
+
+// { animal: 'cat', count: 12, name: 'kitty' }</code></pre>
+
+<p>Note that running untrusted code is a tricky business requiring great care.  To prevent accidental
+global variable leakage, <code>script.runInNewContext</code> is quite useful, but safely running untrusted code
+requires a separate process.</p>
+
 <h2 id="child_Processes">Child Processes</h2>
 
 <p>Node provides a tri-directional <code>popen(3)</code> facility through the <code>ChildProcess</code>
@@ -3620,7 +3888,7 @@ if set true, will cause the subprocess to be run in a new session.</p>
 
 <p>Example of running <code>ls -lh /usr</code>, capturing <code>stdout</code>, <code>stderr</code>, and the exit code:</p>
 
-<pre><code>var util   = require('util'),
+<pre><code>var util  = require('util'),
     spawn = require('child_process').spawn,
     ls    = spawn('ls', ['-lh', '/usr']);
 
@@ -3638,7 +3906,7 @@ ls.on('exit', function (code) {
 
 <p>Example: A very elaborate way to run 'ps ax | grep ssh'</p>
 
-<pre><code>var util   = require('util'),
+<pre><code>var util  = require('util'),
     spawn = require('child_process').spawn,
     ps    = spawn('ps', ['ax']),
     grep  = spawn('grep', ['ssh']);
@@ -3677,8 +3945,9 @@ grep.on('exit', function (code) {
 <pre><code>var spawn = require('child_process').spawn,
     child = spawn('bad_command');
 
+child.stderr.setEncoding('utf8');
 child.stderr.on('data', function (data) {
-  if (/^execvp\(\)/.test(data.asciiSlice(0,data.length))) {
+  if (/^execvp\(\)/.test(data)) {
     console.log('Failed to start child process.');
   }
 });</code></pre>
@@ -3690,8 +3959,8 @@ child.stderr.on('data', function (data) {
 <p>High-level way to execute a command as a child process, buffer the
 output, and return it all in a callback.</p>
 
-<pre><code>var util   = require('util'),
-    exec  = require('child_process').exec,
+<pre><code>var util = require('util'),
+    exec = require('child_process').exec,
     child;
 
 child = exec('cat *.js bad_file | wc -l',
@@ -3971,15 +4240,6 @@ process's stdin fd to act either as a raw device or default.</p>
        sys: 34920,
        idle: 1072572010,
        irq: 30 } } ]</code></pre>
-
-<h3 id="os.getNetworkInterfaces">os.getNetworkInterfaces()</h3>
-
-<p>Get a list of network interfaces:</p>
-
-<pre><code>{ lo: { ip: '127.0.0.1', internal: true, ip6: '::1' },
-  eth0: { ip6: 'fe80::f2de:f1ff:fe19:ae7', internal: false },
-  wlan0: { ip: '10.0.1.118', internal: false, ip6: 'fe80::226:c7ff:fe7d:1602' },
-  vboxnet0: {} }</code></pre>
 
 <h2 id="debugger">Debugger</h2>
 

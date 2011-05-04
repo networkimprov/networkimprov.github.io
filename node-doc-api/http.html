@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>http - Node.js Manual &amp; Documentation</title>
+  <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="assets/sh.css" type="text/css" media="all"/>
 </head>
@@ -14,7 +16,7 @@
       </div>
       <hr />
     </header>
-    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#hTTP" title="HTTP">HTTP</a></li><li><a href="#http.Server" title="http.Server">http.Server</a><ul><li><a href="#event_request_" title="Event: 'request'">Event: 'request'</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_request_" title="Event: 'request'">Event: 'request'</a></li><li><a href="#event_checkContinue_" title="Event: 'checkContinue'">Event: 'checkContinue'</a></li><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_clientError_" title="Event: 'clientError'">Event: 'clientError'</a></li><li><a href="#http.createServer" title="http.createServer(requestListener)">http.createServer(requestListener)</a></li><li><a href="#server.listen" title="server.listen(port, [hostname], [callback])">server.listen(port, [hostname], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li></ul></li><li><a href="#http.ServerRequest" title="http.ServerRequest">http.ServerRequest</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#request.method" title="request.method">request.method</a></li><li><a href="#request.url" title="request.url">request.url</a></li><li><a href="#request.headers" title="request.headers">request.headers</a></li><li><a href="#request.trailers" title="request.trailers">request.trailers</a></li><li><a href="#request.httpVersion" title="request.httpVersion">request.httpVersion</a></li><li><a href="#request.setEncoding" title="request.setEncoding(encoding=null)">request.setEncoding(encoding=null)</a></li><li><a href="#request.pause" title="request.pause()">request.pause()</a></li><li><a href="#request.resume" title="request.resume()">request.resume()</a></li><li><a href="#request.connection" title="request.connection">request.connection</a></li></ul></li><li><a href="#http.ServerResponse" title="http.ServerResponse">http.ServerResponse</a><ul><li><a href="#response.writeContinue" title="response.writeContinue()">response.writeContinue()</a></li><li><a href="#response.writeHead" title="response.writeHead(statusCode, [reasonPhrase], [headers])">response.writeHead(statusCode, [reasonPhrase], [headers])</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.setHeader" title="response.setHeader(name, value)">response.setHeader(name, value)</a></li><li><a href="#response.getHeader" title="response.getHeader(name)">response.getHeader(name)</a></li><li><a href="#response.removeHeader" title="response.removeHeader(name)">response.removeHeader(name)</a></li><li><a href="#response.write" title="response.write(chunk, encoding='utf8')">response.write(chunk, encoding='utf8')</a></li><li><a href="#response.addTrailers" title="response.addTrailers(headers)">response.addTrailers(headers)</a></li><li><a href="#response.end" title="response.end([data], [encoding])">response.end([data], [encoding])</a></li></ul></li><li><a href="#http.request" title="http.request(options, callback)">http.request(options, callback)</a></li><li><a href="#http.get" title="http.get(options, callback)">http.get(options, callback)</a></li><li><a href="#http.Agent" title="http.Agent">http.Agent</a></li><li><a href="#http.getAgent" title="http.getAgent(host, port)">http.getAgent(host, port)</a><ul><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_continue_" title="Event: 'continue'">Event: 'continue'</a></li><li><a href="#agent.maxSockets" title="agent.maxSockets">agent.maxSockets</a></li><li><a href="#agent.sockets" title="agent.sockets">agent.sockets</a></li><li><a href="#agent.queue" title="agent.queue">agent.queue</a></li></ul></li><li><a href="#http.ClientRequest" title="http.ClientRequest">http.ClientRequest</a><ul><li><a href="#event_response_" title="Event 'response'">Event 'response'</a></li><li><a href="#request.write" title="request.write(chunk, encoding='utf8')">request.write(chunk, encoding='utf8')</a></li><li><a href="#request.end" title="request.end([data], [encoding])">request.end([data], [encoding])</a></li><li><a href="#request.abort" title="request.abort()">request.abort()</a></li></ul></li><li><a href="#http.ClientResponse" title="http.ClientResponse">http.ClientResponse</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.httpVersion" title="response.httpVersion">response.httpVersion</a></li><li><a href="#response.headers" title="response.headers">response.headers</a></li><li><a href="#response.trailers" title="response.trailers">response.trailers</a></li><li><a href="#response.setEncoding" title="response.setEncoding(encoding=null)">response.setEncoding(encoding=null)</a></li><li><a href="#response.pause" title="response.pause()">response.pause()</a></li><li><a href="#response.resume" title="response.resume()">response.resume()</a></li></ul></li></ul></div>
+    <div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#hTTP" title="HTTP">HTTP</a></li><li><a href="#http.Server" title="http.Server">http.Server</a><ul><li><a href="#event_request_" title="Event: 'request'">Event: 'request'</a></li><li><a href="#event_connection_" title="Event: 'connection'">Event: 'connection'</a></li><li><a href="#event_close_" title="Event: 'close'">Event: 'close'</a></li><li><a href="#event_checkContinue_" title="Event: 'checkContinue'">Event: 'checkContinue'</a></li><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_clientError_" title="Event: 'clientError'">Event: 'clientError'</a></li><li><a href="#http.createServer" title="http.createServer([requestListener])">http.createServer([requestListener])</a></li><li><a href="#server.listen" title="server.listen(port, [hostname], [callback])">server.listen(port, [hostname], [callback])</a></li><li><a href="#server.listen" title="server.listen(path, [callback])">server.listen(path, [callback])</a></li><li><a href="#server.close" title="server.close()">server.close()</a></li></ul></li><li><a href="#http.ServerRequest" title="http.ServerRequest">http.ServerRequest</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#request.method" title="request.method">request.method</a></li><li><a href="#request.url" title="request.url">request.url</a></li><li><a href="#request.headers" title="request.headers">request.headers</a></li><li><a href="#request.trailers" title="request.trailers">request.trailers</a></li><li><a href="#request.httpVersion" title="request.httpVersion">request.httpVersion</a></li><li><a href="#request.setEncoding" title="request.setEncoding(encoding=null)">request.setEncoding(encoding=null)</a></li><li><a href="#request.pause" title="request.pause()">request.pause()</a></li><li><a href="#request.resume" title="request.resume()">request.resume()</a></li><li><a href="#request.connection" title="request.connection">request.connection</a></li></ul></li><li><a href="#http.ServerResponse" title="http.ServerResponse">http.ServerResponse</a><ul><li><a href="#response.writeContinue" title="response.writeContinue()">response.writeContinue()</a></li><li><a href="#response.writeHead" title="response.writeHead(statusCode, [reasonPhrase], [headers])">response.writeHead(statusCode, [reasonPhrase], [headers])</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.setHeader" title="response.setHeader(name, value)">response.setHeader(name, value)</a></li><li><a href="#response.getHeader" title="response.getHeader(name)">response.getHeader(name)</a></li><li><a href="#response.removeHeader" title="response.removeHeader(name)">response.removeHeader(name)</a></li><li><a href="#response.write" title="response.write(chunk, encoding='utf8')">response.write(chunk, encoding='utf8')</a></li><li><a href="#response.addTrailers" title="response.addTrailers(headers)">response.addTrailers(headers)</a></li><li><a href="#response.end" title="response.end([data], [encoding])">response.end([data], [encoding])</a></li></ul></li><li><a href="#http.request" title="http.request(options, callback)">http.request(options, callback)</a></li><li><a href="#http.get" title="http.get(options, callback)">http.get(options, callback)</a></li><li><a href="#http.Agent" title="http.Agent">http.Agent</a></li><li><a href="#http.getAgent" title="http.getAgent(host, port)">http.getAgent(host, port)</a><ul><li><a href="#event_upgrade_" title="Event: 'upgrade'">Event: 'upgrade'</a></li><li><a href="#event_continue_" title="Event: 'continue'">Event: 'continue'</a></li><li><a href="#agent.maxSockets" title="agent.maxSockets">agent.maxSockets</a></li><li><a href="#agent.sockets" title="agent.sockets">agent.sockets</a></li><li><a href="#agent.queue" title="agent.queue">agent.queue</a></li></ul></li><li><a href="#http.ClientRequest" title="http.ClientRequest">http.ClientRequest</a><ul><li><a href="#event_response_" title="Event 'response'">Event 'response'</a></li><li><a href="#request.write" title="request.write(chunk, encoding='utf8')">request.write(chunk, encoding='utf8')</a></li><li><a href="#request.end" title="request.end([data], [encoding])">request.end([data], [encoding])</a></li><li><a href="#request.abort" title="request.abort()">request.abort()</a></li></ul></li><li><a href="#http.ClientResponse" title="http.ClientResponse">http.ClientResponse</a><ul><li><a href="#event_data_" title="Event: 'data'">Event: 'data'</a></li><li><a href="#event_end_" title="Event: 'end'">Event: 'end'</a></li><li><a href="#response.statusCode" title="response.statusCode">response.statusCode</a></li><li><a href="#response.httpVersion" title="response.httpVersion">response.httpVersion</a></li><li><a href="#response.headers" title="response.headers">response.headers</a></li><li><a href="#response.trailers" title="response.trailers">response.trailers</a></li><li><a href="#response.setEncoding" title="response.setEncoding(encoding=null)">response.setEncoding(encoding=null)</a></li><li><a href="#response.pause" title="response.pause()">response.pause()</a></li><li><a href="#response.resume" title="response.resume()">response.resume()</a></li></ul></li></ul></div>
 <h2 id="hTTP">HTTP</h2>
 
 <p>To use the HTTP server and client one must <code>require('http')</code>.</p>
@@ -47,7 +49,9 @@ parse the actual headers or the body.</p>
 
 <p><code>function (request, response) { }</code></p>
 
-<p> <code>request</code> is an instance of <code>http.ServerRequest</code> and <code>response</code> is
+<p>Emitted each time there is request. Note that there may be multiple requests
+per connection (in the case of keep-alive connections).
+ <code>request</code> is an instance of <code>http.ServerRequest</code> and <code>response</code> is
  an instance of <code>http.ServerResponse</code></p>
 
 <h3 id="event_connection_">Event: 'connection'</h3>
@@ -63,13 +67,6 @@ parse the actual headers or the body.</p>
 <p><code>function (errno) { }</code></p>
 
 <p> Emitted when the server closes.</p>
-
-<h3 id="event_request_">Event: 'request'</h3>
-
-<p><code>function (request, response) {}</code></p>
-
-<p>Emitted each time there is request. Note that there may be multiple requests
-per connection (in the case of keep-alive connections).</p>
 
 <h3 id="event_checkContinue_">Event: 'checkContinue'</h3>
 
@@ -107,7 +104,7 @@ sent to the server on that socket.</p>
 
 <p>If a client connection emits an 'error' event - it will forwarded here.</p>
 
-<h3 id="http.createServer">http.createServer(requestListener)</h3>
+<h3 id="http.createServer">http.createServer([requestListener])</h3>
 
 <p>Returns a new web server object.</p>
 
@@ -152,7 +149,7 @@ the user -- and passed as the first argument to a <code>'request'</code> listene
 <p>Example: A chunk of the body is given as the single
 argument. The transfer-encoding has been decoded.  The
 body chunk is a string.  The body encoding is set with
-<code>request.setBodyEncoding()</code>.</p>
+<code>request.setEncoding()</code>.</p>
 
 <h3 id="event_end_">Event: 'end'</h3>
 
@@ -242,7 +239,7 @@ passed as the second parameter to the <code>'request'</code> event. It is a <cod
 <h3 id="response.writeContinue">response.writeContinue()</h3>
 
 <p>Sends a HTTP/1.1 100 Continue message to the client, indicating that
-the request body should be sent. See the the <code>checkContinue</code> event on
+the request body should be sent. See the <a href="#event_checkContinue_">checkContinue</a> event on
 <code>Server</code>.</p>
 
 <h3 id="response.writeHead">response.writeHead(statusCode, [reasonPhrase], [headers])</h3>
@@ -264,6 +261,11 @@ be called before <code>response.end()</code> is called.</p>
 
 <p>If you call <code>response.write()</code> or <code>response.end()</code> before calling this, the
 implicit/mutable headers will be calculated and call this function for you.</p>
+
+<p>Note: that Content-Length is given in bytes not characters. The above example
+works because the string <code>'hello world'</code> contains only single byte characters.
+If the body contains higher coded characters then <code>Buffer.byteLength()</code>
+should be used to determine the number of bytes in a given encoding.</p>
 
 <h3 id="response.statusCode">response.statusCode</h3>
 
@@ -447,7 +449,7 @@ agent. The <code>http.getAgent()</code> function allows you to access the agents
 isn't being listened for, clients receiving an upgrade header will have their
 connections closed.</p>
 
-<p>See the description of the <code>upgrade</code> event for <code>http.Server</code> for further details.</p>
+<p>See the description of the <a href="http.html#event_upgrade_">upgrade event</a> for <code>http.Server</code> for further details.</p>
 
 <h3 id="event_continue_">Event: 'continue'</h3>
 
@@ -472,7 +474,7 @@ the client should send the request body.</p>
 <h2 id="http.ClientRequest">http.ClientRequest</h2>
 
 <p>This object is created internally and returned from <code>http.request()</code>.  It
-represents an <em>in-progress</em> request whose header has already been queued.  The 
+represents an <em>in-progress</em> request whose header has already been queued.  The
 header is still mutable using the <code>setHeader(name, value)</code>, <code>getHeader(name)</code>,
 <code>removeHeader(name)</code> API.  The actual header will be sent along with the first
 data chunk or when closing the connection.</p>
